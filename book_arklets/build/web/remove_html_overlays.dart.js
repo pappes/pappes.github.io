@@ -10969,13 +10969,13 @@ var $$ = Object.create(null);
     t1.get$onRecord().listen$1(new T.main_closure());
     t2 = document;
     t3 = t2.nodeValue;
-    t1.info$1("Function : removeAllOverlays, Parameters : {[htmlDoc," + (t3 == null ? J.Interceptor.prototype.toString$0.call(C.HtmlDocument_methods, t2) : t3) + "], [allowRedirect,false]}");
+    t1.info$1("Function : removeAllOverlays, Parameters : {[htmlDoc," + (t3 == null ? J.Interceptor.prototype.toString$0.call(C.HtmlDocument_methods, t2) : t3) + "], [allowRedirect,true]}");
     E.MyHtml__stripDownPage(t2);
     iFrames = W._FrozenElementList$_wrap(t2.querySelectorAll("iframe"), null);
     iFramesSortable = iFrames.toList$0(iFrames);
     C.JSArray_methods.checkMutable$1(iFramesSortable, "sort");
     H.IterableMixinWorkaround_sortList(iFramesSortable, E.MyHtml__compareElementWidth$closure());
-    new E.MyIFrame(C.JSArray_methods.get$last(iFramesSortable), t2, null).makeProminant$2(E.MyHtml__stripDownPage$closure(), false);
+    new E.MyIFrame(C.JSArray_methods.get$last(iFramesSortable), t2, null).makeProminant$2(E.MyHtml__stripDownPage$closure(), true);
     t1.fine$1("Function : removeAllOverlays, Return : void");
   }, "call$0", "main$closure", 0, 0, 12],
   main_closure: {
