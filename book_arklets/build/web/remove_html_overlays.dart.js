@@ -10917,7 +10917,7 @@ var $$ = Object.create(null);
     call$1: function(frame) {
       var t1, t2;
       t1 = J.getInterceptor$x(frame);
-      if (t1.get$id(frame) === "iframe_rebuilt")
+      if (!(t1.get$id(frame) !== "iframe_rebuilt" && this.allowRedirect_1))
         t2 = !J.$eq(this.box_0.iFrameSource_0, t1.get$attributes(frame)._element.getAttribute("src")) && !this.allowRedirect_1;
       else
         t2 = true;
