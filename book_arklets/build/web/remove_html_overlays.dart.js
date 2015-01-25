@@ -10690,10 +10690,15 @@ var $$ = Object.create(null);
     t1.fine$1("Function : resolveElementUrl, Return : void");
   },
   MyHtml__compareElementWidth: [function(a, b) {
-    var t1, comparison;
+    var t1, t2, t3, comparison;
     t1 = $.get$log();
     t1.info$1("Function : _compareElementWidth, Parameters : {[a," + H.S(a) + "][b," + H.S(b) + "]}");
-    comparison = J.get$clientWidth$x(a) < J.get$clientWidth$x(b) ? -1 : 1;
+    t2 = J.getInterceptor$x(a);
+    t3 = J.getInterceptor$x(b);
+    if (t2.get$clientWidth(a) < t3.get$clientWidth(b))
+      comparison = -1;
+    else
+      comparison = t2.get$clientWidth(a) === t3.get$clientWidth(b) ? 0 : 1;
     t1.fine$1("Function : _compareElementWidth, Return : comparison");
     return comparison;
   }, "call$2", "MyHtml__compareElementWidth$closure", 4, 0, 32],
@@ -11248,9 +11253,6 @@ J.get$attributes$x = function(receiver) {
 };
 J.get$children$x = function(receiver) {
   return J.getInterceptor$x(receiver).get$children(receiver);
-};
-J.get$clientWidth$x = function(receiver) {
-  return J.getInterceptor$x(receiver).get$clientWidth(receiver);
 };
 J.get$error$x = function(receiver) {
   return J.getInterceptor$x(receiver).get$error(receiver);
