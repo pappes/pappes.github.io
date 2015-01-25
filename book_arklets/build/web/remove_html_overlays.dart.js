@@ -10808,16 +10808,20 @@ var $$ = Object.create(null);
   MyIFrame: {
     "^": "Object;_iFrame,_htmlDoc,_iFrameHtml",
     makeProminant$2: function(cleanUpProcess, allowRedirect) {
-      var t1, iFrameSource, t2, t3;
-      t1 = $.get$log();
-      t1.info$1("Function : makeProminant, Parameters : {[cleanUpProcess," + cleanUpProcess.toString$0(0) + "], [allowRedirect," + allowRedirect + "]}");
+      var t1, t2, iFrameSource, t3, t4;
+      t1 = {};
+      t2 = $.get$log();
+      t2.info$1("Function : makeProminant, Parameters : {[cleanUpProcess," + cleanUpProcess.toString$0(0) + "], [allowRedirect," + allowRedirect + "]}");
       iFrameSource = J.get$attributes$x(this._iFrame)._element.getAttribute("src");
-      this._buildIFrameAsHtml$3(!J.contains$1$asx(iFrameSource, "</html>") ? P.Uri_parse(window.location.href).resolveUri$1(P.Uri_parse(iFrameSource)).toString$0(0) : iFrameSource, cleanUpProcess, allowRedirect);
-      t2 = this._htmlDoc;
-      t3 = W._FrozenElementList$_wrap(t2.querySelectorAll("iframe"), null);
-      t3.forEach$1(t3, new E.MyIFrame_makeProminant_closure());
-      cleanUpProcess.call$1(t2);
-      t1.fine$1("Function : makeProminant, Return : void");
+      t1.iFrameSource_0 = iFrameSource;
+      if (!J.contains$1$asx(iFrameSource, "</html>"))
+        t1.iFrameSource_0 = P.Uri_parse(window.location.href).resolveUri$1(P.Uri_parse(t1.iFrameSource_0)).toString$0(0);
+      this._buildIFrameAsHtml$3(t1.iFrameSource_0, cleanUpProcess, allowRedirect);
+      t3 = this._htmlDoc;
+      t4 = W._FrozenElementList$_wrap(t3.querySelectorAll("iframe"), null);
+      t4.forEach$1(t4, new E.MyIFrame_makeProminant_closure(t1, allowRedirect));
+      cleanUpProcess.call$1(t3);
+      t2.fine$1("Function : makeProminant, Return : void");
     },
     getIFrameHtml$0: function() {
       var t1, t2, innerHtml;
@@ -10909,11 +10913,16 @@ var $$ = Object.create(null);
     }
   },
   MyIFrame_makeProminant_closure: {
-    "^": "Closure:59;",
+    "^": "Closure:59;box_0,allowRedirect_1",
     call$1: function(frame) {
-      var t1 = J.getInterceptor$x(frame);
-      if (t1.get$id(frame) !== "iframe_rebuilt") {
-        $.get$log().finest$1("Function : _stripDownPage, remove : " + H.S(frame));
+      var t1, t2;
+      t1 = J.getInterceptor$x(frame);
+      if (t1.get$id(frame) === "iframe_rebuilt")
+        t2 = !this.allowRedirect_1 && J.$eq(this.box_0.iFrameSource_0, t1.get$attributes(frame)._element.getAttribute("src"));
+      else
+        t2 = true;
+      if (t2) {
+        $.get$log().finest$1("Function : makeProminant, remove : " + H.S(frame));
         t1.remove$0(frame);
       }
     }
