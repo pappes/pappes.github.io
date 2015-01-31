@@ -8917,7 +8917,7 @@ var $$ = Object.create(null);
     "%": ";DOMRectReadOnly"
   },
   Element: {
-    "^": "Node;className=,id=,outerHtml:outerHTML=",
+    "^": "Node;id=,outerHtml:outerHTML=",
     get$attributes: function(receiver) {
       return new W._ElementAttributeMap(receiver);
     },
@@ -9156,7 +9156,7 @@ var $$ = Object.create(null);
     "%": "NavigatorUserMediaError"
   },
   Node: {
-    "^": "EventTarget;parent:parentElement=,text:textContent=",
+    "^": "EventTarget;nodeName=,parent:parentElement=,text:textContent=",
     remove$0: function(receiver) {
       var t1 = receiver.parentNode;
       if (t1 != null)
@@ -10981,7 +10981,9 @@ var $$ = Object.create(null);
       selected = C.JSArray_methods.get$last(pageElements);
       t3 = J.getInterceptor$x(selected);
       t1.finest$1("Function : removeAllOverlays, selected : " + H.S(selected) + " (width " + t3.get$clientWidth(selected) + ") (height " + t3.get$clientHeight(selected) + ")");
-      if (t3.get$className(selected) === "iframe")
+      t3 = t3.get$nodeName(selected);
+      t3.toString;
+      if (t3.toLowerCase() === "iframe")
         new E.MyIFrame(C.JSArray_methods.get$last(pageElements), t2, null).makeProminant$2(E.MyHtml_stripDownPage$closure(), true);
       else
         E.MyHtml_stripDownPage(t2, selected);
