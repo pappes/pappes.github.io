@@ -514,6 +514,9 @@ var $$ = Object.create(null);
         throw H.wrapException(P.RangeError$range(startIndex, 0, receiver.length, null, null));
       return H.stringContainsUnchecked(receiver, other, startIndex);
     },
+    contains$1: function($receiver, other) {
+      return this.contains$2($receiver, other, 0);
+    },
     get$isEmpty: function(receiver) {
       return receiver.length === 0;
     },
@@ -2890,10 +2893,24 @@ var $$ = Object.create(null);
     t2 = htmlDoc.nodeValue;
     t1.info$1("Function : removeAllScripts, Parameters : {[htmlDoc," + (t2 == null ? J.Interceptor.prototype.toString$0.call(C.HtmlDocument_methods, htmlDoc) : t2) + "]}");
     t2 = W._FrozenElementList$_wrap(htmlDoc.querySelectorAll("script"), null);
-    t2.forEach$1(t2, new E.MyHtml_removeAllScripts_closure());
+    t2.where$1(t2, new E.MyHtml_removeAllScripts_closure()).forEach$1(0, new E.MyHtml_removeAllScripts_closure0());
     t1.fine$1("Function : removeAllScripts, Return : void");
   },
   MyHtml_removeAllScripts_closure: {
+    "^": "Closure:4;",
+    call$1: function(e) {
+      var t1, t2, src, retVal;
+      t1 = $.get$log();
+      t1.info$1("Function : _whitelistScripts, Parameters : {[e," + H.S(e) + "]}");
+      t2 = J.get$outerHtml$x(e);
+      t2 = t2 != null ? t2 : "";
+      src = t2.toLowerCase();
+      retVal = (C.JSString_methods.contains$1(src, "swf") || C.JSString_methods.contains$1(src, "devtools")) && true;
+      t1.fine$1("Function : _whitelistScripts, Return : " + retVal);
+      return !retVal;
+    }
+  },
+  MyHtml_removeAllScripts_closure0: {
     "^": "Closure:10;",
     call$1: function(e) {
       var t1 = J.getInterceptor$x(e);
@@ -3043,6 +3060,9 @@ J.get$length$asx = function(receiver) {
 };
 J.get$name$x = function(receiver) {
   return J.getInterceptor$x(receiver).get$name(receiver);
+};
+J.get$outerHtml$x = function(receiver) {
+  return J.getInterceptor$x(receiver).get$outerHtml(receiver);
 };
 J.remove$0$ax = function(receiver) {
   return J.getInterceptor$ax(receiver).remove$0(receiver);

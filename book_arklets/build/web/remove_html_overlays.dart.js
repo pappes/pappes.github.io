@@ -706,6 +706,9 @@ var $$ = Object.create(null);
     substring$1: function($receiver, startIndex) {
       return this.substring$2($receiver, startIndex, null);
     },
+    toLowerCase$0: function(receiver) {
+      return receiver.toLowerCase();
+    },
     $mul: function(receiver, times) {
       var s, result;
       if (0 >= times)
@@ -10698,18 +10701,14 @@ var $$ = Object.create(null);
     if (selected != null)
       E.MyHtml__whitelistElementAndParents(selected, elementsToBeDeleted);
     else {
-      t3 = t2.querySelectorAll$1(target, "input");
+      t3 = t2.querySelectorAll$1(target, "input, object, iframe, video");
       t3.forEach$1(t3, new E.MyHtml_stripDownPage_closure(elementsToBeDeleted));
-      t3 = t2.querySelectorAll$1(target, "object");
-      t3.forEach$1(t3, new E.MyHtml_stripDownPage_closure0(elementsToBeDeleted));
-      t3 = t2.querySelectorAll$1(target, "video");
-      t3.forEach$1(t3, new E.MyHtml_stripDownPage_closure1(elementsToBeDeleted));
-      t3 = t2.querySelectorAll$1(target, "iframe");
-      t3.forEach$1(t3, new E.MyHtml_stripDownPage_closure2(elementsToBeDeleted));
       t3 = t2.querySelectorAll$1(target, "a");
-      t3.forEach$1(t3, new E.MyHtml_stripDownPage_closure3(elementsToBeDeleted));
+      t3.forEach$1(t3, new E.MyHtml_stripDownPage_closure0(elementsToBeDeleted));
+      t3 = t2.querySelectorAll$1(target, "script");
+      t3.where$1(t3, new E.MyHtml_stripDownPage_closure1()).forEach$1(0, new E.MyHtml_stripDownPage_closure2(elementsToBeDeleted));
     }
-    elementsToBeDeleted.forEach$1(0, new E.MyHtml_stripDownPage_closure4());
+    elementsToBeDeleted.forEach$1(0, new E.MyHtml_stripDownPage_closure3());
     if (!!t2.$isHtmlDocument)
       E.MyHtml_removeAllHandlers(target);
     t1.fine$1("Function : _stripDownPage, Return : void");
@@ -10774,32 +10773,33 @@ var $$ = Object.create(null);
     }
   },
   MyHtml_stripDownPage_closure0: {
-    "^": "Closure:29;elementsToBeDeleted_1",
-    call$1: function(e) {
-      return E.MyHtml__whitelistElementAndParents(e, this.elementsToBeDeleted_1);
-    }
-  },
-  MyHtml_stripDownPage_closure1: {
-    "^": "Closure:29;elementsToBeDeleted_2",
-    call$1: function(e) {
-      return E.MyHtml__whitelistElementAndParents(e, this.elementsToBeDeleted_2);
-    }
-  },
-  MyHtml_stripDownPage_closure2: {
-    "^": "Closure:29;elementsToBeDeleted_3",
-    call$1: function(e) {
-      return E.MyHtml__whitelistElementAndParents(e, this.elementsToBeDeleted_3);
-    }
-  },
-  MyHtml_stripDownPage_closure3: {
-    "^": "Closure:60;elementsToBeDeleted_4",
+    "^": "Closure:60;elementsToBeDeleted_1",
     call$1: function(e) {
       var txt = J.get$text$x(e);
       if ((txt != null ? txt : "") !== "")
-        E.MyHtml__whitelistElementAndParents(e, this.elementsToBeDeleted_4);
+        E.MyHtml__whitelistElementAndParents(e, this.elementsToBeDeleted_1);
     }
   },
-  MyHtml_stripDownPage_closure4: {
+  MyHtml_stripDownPage_closure1: {
+    "^": "Closure:29;",
+    call$1: function(e) {
+      var t1, t2, src, retVal;
+      t1 = $.get$log();
+      t1.info$1("Function : _whitelistScripts, Parameters : {[e," + H.S(e) + "]}");
+      t2 = J.get$outerHtml$x(e);
+      src = J.toLowerCase$0$s(t2 != null ? t2 : "");
+      retVal = (C.JSString_methods.contains$1(src, "swf") || C.JSString_methods.contains$1(src, "devtools")) && true;
+      t1.fine$1("Function : _whitelistScripts, Return : " + retVal);
+      return retVal;
+    }
+  },
+  MyHtml_stripDownPage_closure2: {
+    "^": "Closure:60;elementsToBeDeleted_2",
+    call$1: function(e) {
+      E.MyHtml__whitelistElementAndParents(e, this.elementsToBeDeleted_2);
+    }
+  },
+  MyHtml_stripDownPage_closure3: {
     "^": "Closure:60;",
     call$1: function(e) {
       $.get$log().finest$1("Function : _stripDownPage, remove : " + H.S(e));
@@ -11353,6 +11353,9 @@ J.substring$2$s = function(receiver, a0, a1) {
 };
 J.toList$0$ax = function(receiver) {
   return J.getInterceptor$ax(receiver).toList$0(receiver);
+};
+J.toLowerCase$0$s = function(receiver) {
+  return J.getInterceptor$s(receiver).toLowerCase$0(receiver);
 };
 J.toString$0 = function(receiver) {
   return J.getInterceptor(receiver).toString$0(receiver);
