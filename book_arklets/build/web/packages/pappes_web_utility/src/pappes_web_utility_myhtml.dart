@@ -205,12 +205,21 @@ class MyHtml {
     log.fine('Function : removeAllScripts, Return : void');
   }
 
+  /// Removes event handlers from individual elements 
+  static void _removeEventHandler(Element e) {
+    //clone the items in the body to sever any event handlers
+    log.info('Function : _removeEventHandler, Parameters : {[e,$e]}');
+    if (e.nodeName.toLowerCase() == 'script' && e.text != null) 
+        MyJS.runAnyJavaScript(e.text);
+    else 
+        e.replaceWith(e.clone(true));
+    log.fine('Function : _removeEventHandler, Return : void');
+  }
   /// Removes all event handlers from all elements on the browser DOM.
   static void removeAllHandlers(HtmlDocument htmlDoc) {
     //clone the items in the body to sever any event handlers
     log.info('Function : removeAllHandlers, Parameters : {[htmlDoc,$htmlDoc]}');
-    htmlDoc.body.children.toSet().forEach(
-        (Element e) => e.replaceWith(e.clone(true)));
+    htmlDoc.body.children.toSet().forEach(_removeEventHandler);
     MyJS.removeAllTimers();
     log.fine('Function : removeAllHandlers, Return : void');
   }
