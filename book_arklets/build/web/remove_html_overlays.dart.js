@@ -10705,9 +10705,9 @@ var $$ = Object.create(null);
       t3.forEach$1(t3, new E.MyHtml_stripDownPage_closure(elementsToBeDeleted));
       t3 = t2.querySelectorAll$1(target, "a");
       t3.forEach$1(t3, new E.MyHtml_stripDownPage_closure0(elementsToBeDeleted));
-      t3 = t2.querySelectorAll$1(target, "script");
-      t3.where$1(t3, new E.MyHtml_stripDownPage_closure1()).forEach$1(0, new E.MyHtml_stripDownPage_closure2(elementsToBeDeleted));
     }
+    t3 = t2.querySelectorAll$1(target, "script");
+    t3.where$1(t3, new E.MyHtml_stripDownPage_closure1()).forEach$1(0, new E.MyHtml_stripDownPage_closure2(elementsToBeDeleted));
     elementsToBeDeleted.forEach$1(0, new E.MyHtml_stripDownPage_closure3());
     if (!!t2.$isHtmlDocument)
       E.MyHtml_removeAllHandlers(target);

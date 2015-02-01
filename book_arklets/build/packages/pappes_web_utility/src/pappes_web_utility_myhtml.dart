@@ -351,14 +351,14 @@ class MyHtml {
         String txt = ifNull(e.text, '');
         if (txt != '') _whitelistElementAndParents(e, elementsToBeDeleted);
       });
-
-      //whitelist all elements of type script that have reference "swf" or "devtools"
-      //so that falsh can be dynamically loaded
-      target.querySelectorAll('script').where((e) => 
-          _whitelistScripts(e)).forEach((Element e) {
-          _whitelistElementAndParents(e, elementsToBeDeleted);
-      });
     }
+
+    //whitelist all scriopts which are known to be useful
+    //so that flash can be dynamically loaded
+    target.querySelectorAll('script').where((e) => 
+        _whitelistScripts(e)).forEach((Element e) {
+        _whitelistElementAndParents(e, elementsToBeDeleted);
+    });
     //destroy everything that remains
     elementsToBeDeleted.forEach((Element e) {
       log.finest('Function : _stripDownPage, remove : $e');
