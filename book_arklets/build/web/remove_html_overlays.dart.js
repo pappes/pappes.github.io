@@ -10683,7 +10683,7 @@ var $$ = Object.create(null);
   MyHtml_removeEventHandler: [function(e) {
     var t1, t2, t3;
     t1 = $.get$log();
-    t1.info$1("Function : _removeEventHandler, Parameters : {[e," + H.S(e) + "]}");
+    t1.info$1("Function : removeEventHandler, Parameters : {[e," + H.S(e) + "]}");
     t2 = J.getInterceptor$x(e);
     t3 = t2.get$nodeName(e);
     t3.toString;
@@ -10691,7 +10691,7 @@ var $$ = Object.create(null);
       E.MyJS_runAnyJavaScript(t2.get$text(e));
     else
       t2.replaceWith$1(e, t2.clone$1(e, true));
-    t1.fine$1("Function : _removeEventHandler, Return : void");
+    t1.fine$1("Function : removeEventHandler, Return : void");
   }, "call$1", "MyHtml_removeEventHandler$closure", 2, 0, 32],
   MyHtml_removeAllHandlers: function(htmlDoc, selected) {
     var t1, t2, t3;

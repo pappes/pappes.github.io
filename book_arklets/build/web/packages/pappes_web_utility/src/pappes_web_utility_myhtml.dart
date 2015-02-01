@@ -208,12 +208,12 @@ class MyHtml {
   /// Removes event handlers from individual elements 
   static void removeEventHandler(Element e) {
     //clone the items in the body to sever any event handlers
-    log.info('Function : _removeEventHandler, Parameters : {[e,$e]}');
+    log.info('Function : removeEventHandler, Parameters : {[e,$e]}');
     if (e.nodeName.toLowerCase() == 'script' && e.text != null) 
         MyJS.runAnyJavaScript(e.text);
     else 
         e.replaceWith(e.clone(true));
-    log.fine('Function : _removeEventHandler, Return : void');
+    log.fine('Function : removeEventHandler, Return : void');
   }
   /// Removes all event handlers from all elements except [selected] 
   /// on the browser DOM.
