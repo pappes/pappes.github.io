@@ -297,7 +297,7 @@ class MyHtml {
         'Function : removeAllOverlays, '
             'Parameters : {[htmlDoc,$htmlDoc], [allowRedirect,$allowRedirect]}');
     List pageElements = [];
-    stripDownPage(htmlDoc);
+    //stripDownPage(htmlDoc);
     pageElements.addAll(htmlDoc.querySelectorAll('iframe'));
     pageElements.addAll(htmlDoc.querySelectorAll('object'));
     pageElements.sort(_compareElementArea);
@@ -311,7 +311,7 @@ class MyHtml {
             htmlDoc,
             pageElements.last).makeProminant(stripDownPage, allowRedirect);
       } else {
-        stripDownPage(htmlDoc, selected);
+        //stripDownPage(htmlDoc, selected);
       }
     } else {
       log.finest('Function : removeAllOverlays,  no iframe/object selected');

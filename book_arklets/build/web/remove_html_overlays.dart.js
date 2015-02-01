@@ -10703,14 +10703,10 @@ var $$ = Object.create(null);
     t2 = J.getInterceptor$x(target);
     t3 = t2.querySelectorAll$1(target, "*");
     elementsToBeDeleted = t3.toSet$0(t3);
-    if (selected != null)
-      E.MyHtml__whitelistElementAndParents(selected, elementsToBeDeleted);
-    else {
-      t3 = t2.querySelectorAll$1(target, "input, object, iframe, video");
-      t3.forEach$1(t3, new E.MyHtml_stripDownPage_closure(elementsToBeDeleted));
-      t3 = t2.querySelectorAll$1(target, "a");
-      t3.forEach$1(t3, new E.MyHtml_stripDownPage_closure0(elementsToBeDeleted));
-    }
+    t3 = t2.querySelectorAll$1(target, "input, object, iframe, video");
+    t3.forEach$1(t3, new E.MyHtml_stripDownPage_closure(elementsToBeDeleted));
+    t3 = t2.querySelectorAll$1(target, "a");
+    t3.forEach$1(t3, new E.MyHtml_stripDownPage_closure0(elementsToBeDeleted));
     t3 = t2.querySelectorAll$1(target, "script");
     t3.where$1(t3, new E.MyHtml_stripDownPage_closure1()).forEach$1(0, new E.MyHtml_stripDownPage_closure2(elementsToBeDeleted));
     elementsToBeDeleted.forEach$1(0, new E.MyHtml_stripDownPage_closure3());
@@ -10991,7 +10987,6 @@ var $$ = Object.create(null);
     t3 = t2.nodeValue;
     t1.info$1("Function : removeAllOverlays, Parameters : {[htmlDoc," + (t3 == null ? J.Interceptor.prototype.toString$0.call(C.HtmlDocument_methods, t2) : t3) + "], [allowRedirect,true]}");
     pageElements = [];
-    E.MyHtml_stripDownPage(t2, null);
     C.JSArray_methods.addAll$1(pageElements, W._FrozenElementList$_wrap(t2.querySelectorAll("iframe"), null));
     C.JSArray_methods.addAll$1(pageElements, W._FrozenElementList$_wrap(t2.querySelectorAll("object"), null));
     C.JSArray_methods.checkMutable$1(pageElements, "sort");
@@ -11004,8 +10999,6 @@ var $$ = Object.create(null);
       t3.toString;
       if (t3.toLowerCase() === "iframe")
         new E.MyIFrame(C.JSArray_methods.get$last(pageElements), t2, null).makeProminant$2(E.MyHtml_stripDownPage$closure(), true);
-      else
-        E.MyHtml_stripDownPage(t2, selected);
     } else {
       t1.finest$1("Function : removeAllOverlays,  no iframe/object selected");
       E.MyHtml_stripDownPage(t2, null);
