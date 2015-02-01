@@ -206,7 +206,7 @@ class MyHtml {
   }
 
   /// Removes event handlers from individual elements 
-  static void _removeEventHandler(Element e) {
+  static void removeEventHandler(Element e) {
     //clone the items in the body to sever any event handlers
     log.info('Function : _removeEventHandler, Parameters : {[e,$e]}');
     if (e.nodeName.toLowerCase() == 'script' && e.text != null) 
@@ -215,11 +215,13 @@ class MyHtml {
         e.replaceWith(e.clone(true));
     log.fine('Function : _removeEventHandler, Return : void');
   }
-  /// Removes all event handlers from all elements on the browser DOM.
-  static void removeAllHandlers(HtmlDocument htmlDoc) {
+  /// Removes all event handlers from all elements except [selected] 
+  /// on the browser DOM.
+  static void removeAllHandlers(HtmlDocument htmlDoc, [HtmlElement selected = null]) {
     //clone the items in the body to sever any event handlers
-    log.info('Function : removeAllHandlers, Parameters : {[htmlDoc,$htmlDoc]}');
-    htmlDoc.body.children.toSet().forEach(_removeEventHandler);
+    log.info('Function : removeAllHandlers, '
+        'Parameters : {[htmlDoc,$htmlDoc][selected,$selected]}');
+    htmlDoc.body.children.where((e) => e != selected).toSet().forEach(_removeEventHandler);
     MyJS.removeAllTimers();
     log.fine('Function : removeAllHandlers, Return : void');
   }
@@ -297,7 +299,6 @@ class MyHtml {
         'Function : removeAllOverlays, '
             'Parameters : {[htmlDoc,$htmlDoc], [allowRedirect,$allowRedirect]}');
     List pageElements = [];
-    //stripDownPage(htmlDoc);
     pageElements.addAll(htmlDoc.querySelectorAll('iframe'));
     pageElements.addAll(htmlDoc.querySelectorAll('object'));
     pageElements.sort(_compareElementArea);
@@ -311,7 +312,7 @@ class MyHtml {
             htmlDoc,
             pageElements.last).makeProminant(stripDownPage, allowRedirect);
       } else {
-        //stripDownPage(htmlDoc, selected);
+        stripDownPage(htmlDoc, selected);
       }
     } else {
       log.finest('Function : removeAllOverlays,  no iframe/object selected');
@@ -374,7 +375,7 @@ class MyHtml {
       e.remove();
     });
     if (target is HtmlDocument) {
-      removeAllHandlers(target);
+      removeAllHandlers(target, selected);
     }
     log.fine('Function : _stripDownPage, Return : void');
   }

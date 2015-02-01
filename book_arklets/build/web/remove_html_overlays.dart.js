@@ -310,7 +310,7 @@ var $$ = Object.create(null);
     },
     noSuchMethod$1: [function(receiver, invocation) {
       throw H.wrapException(P.NoSuchMethodError$(receiver, invocation.get$memberName(), invocation.get$positionalArguments(), invocation.get$namedArguments(), null));
-    }, "call$1", "get$noSuchMethod", 2, 0, null, 35],
+    }, "call$1", "get$noSuchMethod", 2, 0, null, 34],
     "%": "ArrayBuffer|DOMImplementation|MediaError|MediaKeyError|Navigator|Range|SVGAnimatedLength|SVGAnimatedLengthList|SVGAnimatedNumber|SVGAnimatedNumberList|SVGAnimatedString"
   },
   JSBool: {
@@ -336,7 +336,7 @@ var $$ = Object.create(null);
     },
     noSuchMethod$1: [function(receiver, invocation) {
       return J.Interceptor.prototype.noSuchMethod$1.call(this, receiver, invocation);
-    }, "call$1", "get$noSuchMethod", 2, 0, null, 35]
+    }, "call$1", "get$noSuchMethod", 2, 0, null, 34]
   },
   JavaScriptObject: {
     "^": "Interceptor;",
@@ -1006,13 +1006,13 @@ var $$ = Object.create(null);
     return x == null || typeof x === "string" || typeof x === "number" || typeof x === "boolean";
   },
   startRootIsolate_closure: {
-    "^": "Closure:36;box_0,entry_1",
+    "^": "Closure:35;box_0,entry_1",
     call$0: function() {
       this.entry_1.call$1(this.box_0.args_0);
     }
   },
   startRootIsolate_closure0: {
-    "^": "Closure:36;box_0,entry_2",
+    "^": "Closure:35;box_0,entry_2",
     call$0: function() {
       this.entry_2.call$2(this.box_0.args_0, null);
     }
@@ -1072,7 +1072,7 @@ var $$ = Object.create(null);
         return;
       t1 = this.pauseTokens;
       t1.remove$1(0, resume);
-      if (t1._collection$_length === 0) {
+      if (t1._length === 0) {
         for (t1 = this.delayedEvents; t2 = t1.length, t2 !== 0;) {
           if (0 >= t2)
             return H.ioore(t1, 0);
@@ -1167,7 +1167,7 @@ var $$ = Object.create(null);
     handleUncaughtError$2: function(error, stackTrace) {
       var t1, message, t2;
       t1 = this.errorPorts;
-      if (t1._collection$_length === 0) {
+      if (t1._length === 0) {
         if (this.errorsAreFatal === true && this === init.globalState.rootContext)
           return;
         if (self.console && self.console.error)
@@ -1259,7 +1259,7 @@ var $$ = Object.create(null);
       t1.$indexSet(0, portId, port);
     },
     _updateGlobalState$0: function() {
-      if (this.ports._collection$_length - this.weakPorts._collection$_length > 0 || this.isPaused || !this.initialized)
+      if (this.ports._length - this.weakPorts._length > 0 || this.isPaused || !this.initialized)
         init.globalState.isolates.$indexSet(0, this.id, this);
       else
         this.kill$0();
@@ -1301,10 +1301,10 @@ var $$ = Object.create(null);
       var $event, t1, t2;
       $event = this.dequeue$0();
       if ($event == null) {
-        if (init.globalState.rootContext != null && init.globalState.isolates.containsKey$1(init.globalState.rootContext.id) && init.globalState.fromCommandLine === true && init.globalState.rootContext.ports._collection$_length === 0)
+        if (init.globalState.rootContext != null && init.globalState.isolates.containsKey$1(init.globalState.rootContext.id) && init.globalState.fromCommandLine === true && init.globalState.rootContext.ports._length === 0)
           H.throwExpression(P.Exception_Exception("Program exited with open ReceivePorts."));
         t1 = init.globalState;
-        if (t1.isWorker === true && t1.isolates._collection$_length === 0 && t1.topEventLoop._activeJsAsyncCount === 0) {
+        if (t1.isWorker === true && t1.isolates._length === 0 && t1.topEventLoop._activeJsAsyncCount === 0) {
           t1 = t1.mainManager;
           t2 = H._serializeMessage(P.LinkedHashMap_LinkedHashMap$_literal(["command", "close"], null, null));
           t1.toString;
@@ -1364,7 +1364,7 @@ var $$ = Object.create(null);
     "^": "Object;"
   },
   IsolateNatives__processWorkerMessage_closure: {
-    "^": "Closure:36;entryPoint_0,args_1,message_2,isSpawnUri_3,startPaused_4,replyTo_5",
+    "^": "Closure:35;entryPoint_0,args_1,message_2,isSpawnUri_3,startPaused_4,replyTo_5",
     call$0: [function() {
       H.IsolateNatives__startIsolate(this.entryPoint_0, this.args_1, this.message_2, this.isSpawnUri_3, this.startPaused_4, this.replyTo_5);
     }, "call$0", null, 0, 0, null, "call"]
@@ -1434,7 +1434,7 @@ var $$ = Object.create(null);
     $isCapability: true
   },
   _NativeJsSendPort_send_closure: {
-    "^": "Closure:36;box_0,this_1,shouldSerialize_2",
+    "^": "Closure:35;box_0,this_1,shouldSerialize_2",
     call$0: [function() {
       var t1, t2;
       t1 = this.this_1._receivePort;
@@ -1677,7 +1677,7 @@ var $$ = Object.create(null);
     }
   },
   _Copier_visitMap_closure: {
-    "^": "Closure:37;box_0,this_1",
+    "^": "Closure:36;box_0,this_1",
     call$2: function(key, val) {
       var t1 = this.this_1;
       J.$indexSet$ax(this.box_0.copy_0, t1._dispatch$1(key), t1._dispatch$1(val));
@@ -2521,6 +2521,9 @@ var $$ = Object.create(null);
     reflectionInfo.fixed$length = Array;
     return H.Closure_fromTearOff(receiver, functions, reflectionInfo, !!isStatic, jsArguments, $name);
   },
+  throwNoSuchMethod: function(obj, $name, $arguments, expectedArgumentNames) {
+    throw H.wrapException(P.NoSuchMethodError$(obj, new H.Symbol0($name), $arguments, P.LinkedHashMap_LinkedHashMap(null, null, null, P.Symbol, null), expectedArgumentNames));
+  },
   throwCyclicInit: function(staticName) {
     throw H.wrapException(P.CyclicInitializationError$("Cyclic initialization for static " + H.S(staticName)));
   },
@@ -2918,7 +2921,7 @@ var $$ = Object.create(null);
       return receiver.replace(new RegExp(from.replace(new RegExp("[[\\]{}()*+?.\\\\^$|]", 'g'), "\\$&"), 'g'), to.replace(/\$/g, "$$$$"));
   },
   JSInvocationMirror: {
-    "^": "Object;__js_helper$_memberName,_internalName,_kind,_arguments,_namedArgumentNames,_namedIndices",
+    "^": "Object;__js_helper$_memberName,_internalName,_kind,__js_helper$_arguments,_namedArgumentNames,_namedIndices",
     get$memberName: function() {
       return this.__js_helper$_memberName;
     },
@@ -2926,7 +2929,7 @@ var $$ = Object.create(null);
       var t1, argumentCount, list, index;
       if (this._kind === 1)
         return C.List_empty;
-      t1 = this._arguments;
+      t1 = this.__js_helper$_arguments;
       argumentCount = t1.length - this._namedArgumentNames.length;
       if (argumentCount === 0)
         return C.List_empty;
@@ -2946,7 +2949,7 @@ var $$ = Object.create(null);
         return P.LinkedHashMap_LinkedHashMap$_empty(P.Symbol, null);
       t1 = this._namedArgumentNames;
       namedArgumentCount = t1.length;
-      t2 = this._arguments;
+      t2 = this.__js_helper$_arguments;
       namedArgumentsStartIndex = t2.length - namedArgumentCount;
       if (namedArgumentCount === 0)
         return P.LinkedHashMap_LinkedHashMap$_empty(P.Symbol, null);
@@ -3042,7 +3045,7 @@ var $$ = Object.create(null);
     }
   },
   Primitives_functionNoSuchMethod_closure: {
-    "^": "Closure:38;box_0,arguments_1,namedArgumentList_2",
+    "^": "Closure:37;box_0,arguments_1,namedArgumentList_2",
     call$2: function($name, argument) {
       var t1 = this.box_0;
       t1.names_1 = t1.names_1 + "$" + H.S($name);
@@ -3052,7 +3055,7 @@ var $$ = Object.create(null);
     }
   },
   Primitives_applyFunction_closure: {
-    "^": "Closure:38;box_0,defaultArguments_1",
+    "^": "Closure:37;box_0,defaultArguments_1",
     call$2: function(parameter, value) {
       var t1 = this.defaultArguments_1;
       if (t1.containsKey$1(parameter))
@@ -3062,14 +3065,14 @@ var $$ = Object.create(null);
     }
   },
   TypeErrorDecoder: {
-    "^": "Object;_pattern,_arguments,_argumentsExpr,_expr,_method,_receiver",
+    "^": "Object;_pattern,__js_helper$_arguments,_argumentsExpr,_expr,_method,__js_helper$_receiver",
     matchTypeError$1: function(message) {
       var match, result, t1;
       match = new RegExp(this._pattern).exec(message);
       if (match == null)
         return;
       result = Object.create(null);
-      t1 = this._arguments;
+      t1 = this.__js_helper$_arguments;
       if (t1 !== -1)
         result.arguments = match[t1 + 1];
       t1 = this._argumentsExpr;
@@ -3081,7 +3084,7 @@ var $$ = Object.create(null);
       t1 = this._method;
       if (t1 !== -1)
         result.method = match[t1 + 1];
-      t1 = this._receiver;
+      t1 = this.__js_helper$_receiver;
       if (t1 !== -1)
         result.receiver = match[t1 + 1];
       return result;
@@ -3130,13 +3133,13 @@ var $$ = Object.create(null);
     $isError: true
   },
   JsNoSuchMethodError: {
-    "^": "Error;_message,_method,_receiver",
+    "^": "Error;_message,_method,__js_helper$_receiver",
     toString$0: function(_) {
       var t1, t2;
       t1 = this._method;
       if (t1 == null)
         return "NoSuchMethodError: " + H.S(this._message);
-      t2 = this._receiver;
+      t2 = this.__js_helper$_receiver;
       if (t2 == null)
         return "NoSuchMethodError: Cannot call \"" + H.S(t1) + "\" (" + H.S(this._message) + ")";
       return "NoSuchMethodError: Cannot call \"" + H.S(t1) + "\" on \"" + H.S(t2) + "\" (" + H.S(this._message) + ")";
@@ -3181,31 +3184,31 @@ var $$ = Object.create(null);
     }
   },
   invokeClosure_closure: {
-    "^": "Closure:36;closure_0",
+    "^": "Closure:35;closure_0",
     call$0: function() {
       return this.closure_0.call$0();
     }
   },
   invokeClosure_closure0: {
-    "^": "Closure:36;closure_1,arg1_2",
+    "^": "Closure:35;closure_1,arg1_2",
     call$0: function() {
       return this.closure_1.call$1(this.arg1_2);
     }
   },
   invokeClosure_closure1: {
-    "^": "Closure:36;closure_3,arg1_4,arg2_5",
+    "^": "Closure:35;closure_3,arg1_4,arg2_5",
     call$0: function() {
       return this.closure_3.call$2(this.arg1_4, this.arg2_5);
     }
   },
   invokeClosure_closure2: {
-    "^": "Closure:36;closure_6,arg1_7,arg2_8,arg3_9",
+    "^": "Closure:35;closure_6,arg1_7,arg2_8,arg3_9",
     call$0: function() {
       return this.closure_6.call$3(this.arg1_7, this.arg2_8, this.arg3_9);
     }
   },
   invokeClosure_closure3: {
-    "^": "Closure:36;closure_10,arg1_11,arg2_12,arg3_13,arg4_14",
+    "^": "Closure:35;closure_10,arg1_11,arg2_12,arg3_13,arg4_14",
     call$0: function() {
       return this.closure_10.call$4(this.arg1_11, this.arg2_12, this.arg3_13, this.arg4_14);
     }
@@ -3225,7 +3228,7 @@ var $$ = Object.create(null);
     "^": "Closure;"
   },
   BoundClosure: {
-    "^": "TearOffClosure;_self,_target,_receiver,__js_helper$_name",
+    "^": "TearOffClosure;_self,_target,__js_helper$_receiver,__js_helper$_name",
     $eq: function(_, other) {
       if (other == null)
         return false;
@@ -3233,11 +3236,11 @@ var $$ = Object.create(null);
         return true;
       if (!J.getInterceptor(other).$isBoundClosure)
         return false;
-      return this._self === other._self && this._target === other._target && this._receiver === other._receiver;
+      return this._self === other._self && this._target === other._target && this.__js_helper$_receiver === other.__js_helper$_receiver;
     },
     get$hashCode: function(_) {
       var t1, receiverHashCode;
-      t1 = this._receiver;
+      t1 = this.__js_helper$_receiver;
       if (t1 == null)
         receiverHashCode = H.Primitives_objectHashCode(this._self);
       else
@@ -3248,7 +3251,7 @@ var $$ = Object.create(null);
     static: {"^": "BoundClosure_selfFieldNameCache,BoundClosure_receiverFieldNameCache", BoundClosure_selfOf: function(closure) {
         return closure._self;
       }, BoundClosure_receiverOf: function(closure) {
-        return closure._receiver;
+        return closure.__js_helper$_receiver;
       }, BoundClosure_selfFieldName: function() {
         var t1 = $.BoundClosure_selfFieldNameCache;
         if (t1 == null) {
@@ -3384,7 +3387,7 @@ var $$ = Object.create(null);
     }
   },
   initHooks_closure0: {
-    "^": "Closure:39;getUnknownTag_1",
+    "^": "Closure:38;getUnknownTag_1",
     call$2: function(o, tag) {
       return this.getUnknownTag_1(o, tag);
     }
@@ -3741,7 +3744,7 @@ var $$ = Object.create(null);
     $isEfficientLength: true
   },
   ListIterator: {
-    "^": "Object;_iterable,_length,_index,_current",
+    "^": "Object;_iterable,__internal$_length,_index,_current",
     get$current: function() {
       return this._current;
     },
@@ -3750,7 +3753,7 @@ var $$ = Object.create(null);
       t1 = this._iterable;
       t2 = J.getInterceptor$asx(t1);
       $length = t2.get$length(t1);
-      if (this._length !== $length)
+      if (this.__internal$_length !== $length)
         throw H.wrapException(P.ConcurrentModificationError$(t1));
       t3 = this._index;
       if (t3 >= $length) {
@@ -3817,15 +3820,15 @@ var $$ = Object.create(null);
     }
   },
   MappedListIterable: {
-    "^": "ListIterable;_source,_f",
+    "^": "ListIterable;__internal$_source,_f",
     _f$1: function(arg0) {
       return this._f.call$1(arg0);
     },
     get$length: function(_) {
-      return J.get$length$asx(this._source);
+      return J.get$length$asx(this.__internal$_source);
     },
     elementAt$1: function(_, index) {
-      return this._f$1(J.elementAt$1$ax(this._source, index));
+      return this._f$1(J.elementAt$1$ax(this.__internal$_source, index));
     },
     $asListIterable: function($S, $T) {
       return [$T];
@@ -4168,10 +4171,10 @@ var $$ = Object.create(null);
       f = t1.storedCallback_0;
       t1.storedCallback_0 = null;
       f.call$0();
-    }, "call$1", null, 2, 0, null, 40, "call"]
+    }, "call$1", null, 2, 0, null, 39, "call"]
   },
   _AsyncRun__initializeScheduleImmediate_closure: {
-    "^": "Closure:41;box_0,div_1,span_2",
+    "^": "Closure:40;box_0,div_1,span_2",
     call$1: function(callback) {
       var t1, t2;
       ++init.globalState.topEventLoop._activeJsAsyncCount;
@@ -4182,14 +4185,14 @@ var $$ = Object.create(null);
     }
   },
   _AsyncRun__scheduleImmediateJsOverride_internalCallback: {
-    "^": "Closure:36;callback_0",
+    "^": "Closure:35;callback_0",
     call$0: [function() {
       H.leaveJsAsync();
       this.callback_0.call$0();
     }, "call$0", null, 0, 0, null, "call"]
   },
   _AsyncRun__scheduleImmediateWithSetImmediate_internalCallback: {
-    "^": "Closure:36;callback_0",
+    "^": "Closure:35;callback_0",
     call$0: [function() {
       H.leaveJsAsync();
       this.callback_0.call$0();
@@ -4323,7 +4326,7 @@ var $$ = Object.create(null);
       if (this._state >= 4)
         throw H.wrapException(this._addEventError$0());
       this._sendData$1(data);
-    }, "call$1", "get$add", 2, 0, null, 42],
+    }, "call$1", "get$add", 2, 0, null, 41],
     _async$_add$1: function(data) {
       this._sendData$1(data);
     },
@@ -4415,7 +4418,7 @@ var $$ = Object.create(null);
       this._completeError$2(error, stackTrace);
     }, function(error) {
       return this.completeError$2(error, null);
-    }, "completeError$1", "call$2", "call$1", "get$completeError", 2, 2, 43, 16, 17, 18]
+    }, "completeError$1", "call$2", "call$1", "get$completeError", 2, 2, 42, 16, 17, 18]
   },
   _AsyncCompleter: {
     "^": "_Completer;future",
@@ -4712,7 +4715,7 @@ var $$ = Object.create(null);
       }}
   },
   _Future__addListener_closure: {
-    "^": "Closure:36;this_0,listener_1",
+    "^": "Closure:35;this_0,listener_1",
     call$0: function() {
       P._Future__propagateToListeners(this.this_0, this.listener_1);
     }
@@ -4724,7 +4727,7 @@ var $$ = Object.create(null);
     }, "call$1", null, 2, 0, null, 14, "call"]
   },
   _Future__chainForeignFuture_closure0: {
-    "^": "Closure:44;target_1",
+    "^": "Closure:43;target_1",
     call$2: [function(error, stackTrace) {
       this.target_1._completeError$2(error, stackTrace);
     }, function(error) {
@@ -4732,25 +4735,25 @@ var $$ = Object.create(null);
     }, "call$1", "call$2", null, null, 2, 2, null, 16, 17, 18, "call"]
   },
   _Future__asyncComplete_closure: {
-    "^": "Closure:36;this_0,coreFuture_1",
+    "^": "Closure:35;this_0,coreFuture_1",
     call$0: function() {
       P._Future__chainCoreFuture(this.coreFuture_1, this.this_0);
     }
   },
   _Future__asyncComplete_closure0: {
-    "^": "Closure:36;this_2,value_3",
+    "^": "Closure:35;this_2,value_3",
     call$0: function() {
       this.this_2._completeWithValue$1(this.value_3);
     }
   },
   _Future__asyncCompleteError_closure: {
-    "^": "Closure:36;this_0,error_1,stackTrace_2",
+    "^": "Closure:35;this_0,error_1,stackTrace_2",
     call$0: function() {
       this.this_0._completeError$2(this.error_1, this.stackTrace_2);
     }
   },
   _Future__propagateToListeners_handleValueCallback: {
-    "^": "Closure:45;box_1,listener_3,sourceValue_4,zone_5",
+    "^": "Closure:44;box_1,listener_3,sourceValue_4,zone_5",
     call$0: function() {
       var e, s, exception, t1;
       try {
@@ -4866,10 +4869,10 @@ var $$ = Object.create(null);
     "^": "Closure:29;box_2,result_11",
     call$1: [function(ignored) {
       P._Future__propagateToListeners(this.box_2.source_4, new P._FutureListener(null, this.result_11, 0, null, null));
-    }, "call$1", null, 2, 0, null, 46, "call"]
+    }, "call$1", null, 2, 0, null, 45, "call"]
   },
   _Future__propagateToListeners_handleWhenCompleteCallback_closure0: {
-    "^": "Closure:44;box_0,result_12",
+    "^": "Closure:43;box_0,result_12",
     call$2: [function(error, stackTrace) {
       var t1, completeResult;
       t1 = this.box_0;
@@ -4943,7 +4946,7 @@ var $$ = Object.create(null);
       t1 = this.box_0;
       t2 = this.future_3;
       P._runUserCode(new P.Stream_contains__closure(this.needle_2, element), new P.Stream_contains__closure0(t1, t2), P._cancelAndErrorClosure(t1.subscription_0, t2));
-    }, "call$1", null, 2, 0, null, 47, "call"],
+    }, "call$1", null, 2, 0, null, 46, "call"],
     $signature: function() {
       return H.computeSignature(function(T) {
         return {func: "dynamic__T", args: [T]};
@@ -4951,20 +4954,20 @@ var $$ = Object.create(null);
     }
   },
   Stream_contains__closure: {
-    "^": "Closure:36;needle_4,element_5",
+    "^": "Closure:35;needle_4,element_5",
     call$0: function() {
       return J.$eq(this.element_5, this.needle_4);
     }
   },
   Stream_contains__closure0: {
-    "^": "Closure:48;box_0,future_6",
+    "^": "Closure:47;box_0,future_6",
     call$1: function(isMatch) {
       if (isMatch === true)
         P._cancelAndValue(this.box_0.subscription_0, this.future_6, true);
     }
   },
   Stream_contains_closure0: {
-    "^": "Closure:36;future_7",
+    "^": "Closure:35;future_7",
     call$0: [function() {
       this.future_7._complete$1(false);
     }, "call$0", null, 0, 0, null, "call"]
@@ -4973,7 +4976,7 @@ var $$ = Object.create(null);
     "^": "Closure;box_0,this_1,action_2,future_3",
     call$1: [function(element) {
       P._runUserCode(new P.Stream_forEach__closure(this.action_2, element), new P.Stream_forEach__closure0(), P._cancelAndErrorClosure(this.box_0.subscription_0, this.future_3));
-    }, "call$1", null, 2, 0, null, 47, "call"],
+    }, "call$1", null, 2, 0, null, 46, "call"],
     $signature: function() {
       return H.computeSignature(function(T) {
         return {func: "dynamic__T", args: [T]};
@@ -4981,7 +4984,7 @@ var $$ = Object.create(null);
     }
   },
   Stream_forEach__closure: {
-    "^": "Closure:36;action_4,element_5",
+    "^": "Closure:35;action_4,element_5",
     call$0: function() {
       return this.action_4.call$1(this.element_5);
     }
@@ -4992,7 +4995,7 @@ var $$ = Object.create(null);
     }
   },
   Stream_forEach_closure0: {
-    "^": "Closure:36;future_6",
+    "^": "Closure:35;future_6",
     call$0: [function() {
       this.future_6._complete$1(null);
     }, "call$0", null, 0, 0, null, "call"]
@@ -5001,10 +5004,10 @@ var $$ = Object.create(null);
     "^": "Closure:29;box_0",
     call$1: [function(_) {
       ++this.box_0.count_0;
-    }, "call$1", null, 2, 0, null, 40, "call"]
+    }, "call$1", null, 2, 0, null, 39, "call"]
   },
   Stream_length_closure0: {
-    "^": "Closure:36;box_0,future_1",
+    "^": "Closure:35;box_0,future_1",
     call$0: [function() {
       this.future_1._complete$1(this.box_0.count_0);
     }, "call$0", null, 0, 0, null, "call"]
@@ -5013,10 +5016,10 @@ var $$ = Object.create(null);
     "^": "Closure:29;box_0,future_1",
     call$1: [function(_) {
       P._cancelAndValue(this.box_0.subscription_0, this.future_1, false);
-    }, "call$1", null, 2, 0, null, 40, "call"]
+    }, "call$1", null, 2, 0, null, 39, "call"]
   },
   Stream_isEmpty_closure0: {
-    "^": "Closure:36;future_2",
+    "^": "Closure:35;future_2",
     call$0: [function() {
       this.future_2._complete$1(true);
     }, "call$0", null, 0, 0, null, "call"]
@@ -5035,7 +5038,7 @@ var $$ = Object.create(null);
     }
   },
   Stream_last_closure0: {
-    "^": "Closure:36;box_0,future_2",
+    "^": "Closure:35;box_0,future_2",
     call$0: [function() {
       var e, s, t1, exception;
       t1 = this.box_0;
@@ -5398,7 +5401,7 @@ var $$ = Object.create(null);
     }
   },
   _PendingEvents_schedule_closure: {
-    "^": "Closure:36;this_0,dispatch_1",
+    "^": "Closure:35;this_0,dispatch_1",
     call$0: function() {
       var t1, oldState;
       t1 = this.this_0;
@@ -5478,19 +5481,19 @@ var $$ = Object.create(null);
     static: {"^": "_DoneStreamSubscription__DONE_SENT,_DoneStreamSubscription__SCHEDULED,_DoneStreamSubscription__PAUSED"}
   },
   _cancelAndError_closure: {
-    "^": "Closure:36;future_0,error_1,stackTrace_2",
+    "^": "Closure:35;future_0,error_1,stackTrace_2",
     call$0: function() {
       return this.future_0._completeError$2(this.error_1, this.stackTrace_2);
     }
   },
   _cancelAndErrorClosure_closure: {
-    "^": "Closure:49;subscription_0,future_1",
+    "^": "Closure:48;subscription_0,future_1",
     call$2: function(error, stackTrace) {
       return P._cancelAndError(this.subscription_0, this.future_1, error, stackTrace);
     }
   },
   _cancelAndValue_closure: {
-    "^": "Closure:36;future_0,value_1",
+    "^": "Closure:35;future_0,value_1",
     call$0: function() {
       return this.future_0._complete$1(this.value_1);
     }
@@ -5557,10 +5560,10 @@ var $$ = Object.create(null);
       return H.computeSignature(function(S, T) {
         return {func: "void__S", void: true, args: [S]};
       }, this.$receiver, "_ForwardingStreamSubscription");
-    }, 42],
+    }, 41],
     _handleError$2: [function(error, stackTrace) {
       this._addError$2(error, stackTrace);
-    }, "call$2", "get$_handleError", 4, 0, 50, 17, 18],
+    }, "call$2", "get$_handleError", 4, 0, 49, 17, 18],
     _handleDone$0: [function() {
       this._close$0();
     }, "call$0", "get$_handleDone", 0, 0, 12],
@@ -5568,14 +5571,14 @@ var $$ = Object.create(null);
       var t1, t2;
       t1 = this.get$_handleData();
       t2 = this.get$_handleError();
-      this._subscription = this._stream._async$_source.listen$3$onDone$onError(t1, this.get$_handleDone(), t2);
+      this._subscription = this._stream._source.listen$3$onDone$onError(t1, this.get$_handleDone(), t2);
     },
     $as_BufferingStreamSubscription: function($S, $T) {
       return [$T];
     }
   },
   _MapStream: {
-    "^": "_ForwardingStream;_transform,_async$_source",
+    "^": "_ForwardingStream;_transform,_source",
     _transform$1: function(arg0) {
       return this._transform.call$1(arg0);
     },
@@ -5606,7 +5609,7 @@ var $$ = Object.create(null);
     "^": "Object;"
   },
   _rootHandleUncaughtError_closure: {
-    "^": "Closure:36;error_0,stackTrace_1",
+    "^": "Closure:35;error_0,stackTrace_1",
     call$0: function() {
       throw H.wrapException(P._UncaughtAsyncError$(this.error_0, this.stackTrace_1));
     }
@@ -5703,13 +5706,13 @@ var $$ = Object.create(null);
     static: {"^": "_RootZone__rootMap,_RootZone__rootDelegate"}
   },
   _RootZone_bindCallback_closure: {
-    "^": "Closure:36;this_0,f_1",
+    "^": "Closure:35;this_0,f_1",
     call$0: function() {
       return this.this_0.runGuarded$1(this.f_1);
     }
   },
   _RootZone_bindCallback_closure0: {
-    "^": "Closure:36;this_2,f_3",
+    "^": "Closure:35;this_2,f_3",
     call$0: function() {
       return this.this_2.run$1(this.f_3);
     }
@@ -5718,13 +5721,13 @@ var $$ = Object.create(null);
     "^": "Closure:29;this_0,f_1",
     call$1: [function(arg) {
       return this.this_0.runUnaryGuarded$2(this.f_1, arg);
-    }, "call$1", null, 2, 0, null, 51, "call"]
+    }, "call$1", null, 2, 0, null, 50, "call"]
   },
   _RootZone_bindUnaryCallback_closure0: {
     "^": "Closure:29;this_2,f_3",
     call$1: [function(arg) {
       return this.this_2.runUnary$2(this.f_3, arg);
-    }, "call$1", null, 2, 0, null, 51, "call"]
+    }, "call$1", null, 2, 0, null, 50, "call"]
   }
 }],
 ["dart.collection", "dart:collection", , P, {
@@ -5904,15 +5907,15 @@ var $$ = Object.create(null);
     return t1.charCodeAt(0) == 0 ? t1 : t1;
   },
   _HashMap: {
-    "^": "Object;_collection$_length,_strings,_nums,_rest,_keys",
+    "^": "Object;_length,_strings,_nums,_rest,_keys",
     get$length: function(_) {
-      return this._collection$_length;
+      return this._length;
     },
     get$isEmpty: function(_) {
-      return this._collection$_length === 0;
+      return this._length === 0;
     },
     get$isNotEmpty: function(_) {
-      return this._collection$_length !== 0;
+      return this._length !== 0;
     },
     get$keys: function() {
       return H.setRuntimeTypeInfo(new P.HashMapKeyIterable(this), [H.getTypeArgumentByIndex(this, 0)]);
@@ -5996,7 +5999,7 @@ var $$ = Object.create(null);
       bucket = rest[hash];
       if (bucket == null) {
         P._HashMap__setTableEntry(rest, hash, [key, value]);
-        ++this._collection$_length;
+        ++this._length;
         this._keys = null;
       } else {
         index = this._findBucketIndex$2(bucket, key);
@@ -6004,7 +6007,7 @@ var $$ = Object.create(null);
           bucket[index + 1] = value;
         else {
           bucket.push(key, value);
-          ++this._collection$_length;
+          ++this._length;
           this._keys = null;
         }
       }
@@ -6024,7 +6027,7 @@ var $$ = Object.create(null);
       t1 = this._keys;
       if (t1 != null)
         return t1;
-      result = Array(this._collection$_length);
+      result = Array(this._length);
       result.fixed$length = init;
       strings = this._strings;
       if (strings != null) {
@@ -6063,7 +6066,7 @@ var $$ = Object.create(null);
     },
     _addHashTableEntry$3: function(table, key, value) {
       if (table[key] == null) {
-        ++this._collection$_length;
+        ++this._length;
         this._keys = null;
       }
       P._HashMap__setTableEntry(table, key, value);
@@ -6098,15 +6101,15 @@ var $$ = Object.create(null);
     "^": "Closure:29;this_0",
     call$1: [function(each) {
       return this.this_0.$index(0, each);
-    }, "call$1", null, 2, 0, null, 52, "call"]
+    }, "call$1", null, 2, 0, null, 51, "call"]
   },
   HashMapKeyIterable: {
     "^": "IterableBase;_map",
     get$length: function(_) {
-      return this._map._collection$_length;
+      return this._map._length;
     },
     get$isEmpty: function(_) {
-      return this._map._collection$_length === 0;
+      return this._map._length === 0;
     },
     get$iterator: function(_) {
       var t1 = this._map;
@@ -6150,15 +6153,15 @@ var $$ = Object.create(null);
     }
   },
   _LinkedHashMap: {
-    "^": "Object;_collection$_length,_strings,_nums,_rest,_first,_last,_modifications",
+    "^": "Object;_length,_strings,_nums,_rest,_first,_last,_modifications",
     get$length: function(_) {
-      return this._collection$_length;
+      return this._length;
     },
     get$isEmpty: function(_) {
-      return this._collection$_length === 0;
+      return this._length === 0;
     },
     get$isNotEmpty: function(_) {
-      return this._collection$_length !== 0;
+      return this._length !== 0;
     },
     get$keys: function() {
       return H.setRuntimeTypeInfo(new P.LinkedHashMapKeyIterable(this), [H.getTypeArgumentByIndex(this, 0)]);
@@ -6283,13 +6286,13 @@ var $$ = Object.create(null);
       return cell.get$_value();
     },
     clear$0: function(_) {
-      if (this._collection$_length > 0) {
+      if (this._length > 0) {
         this._last = null;
         this._first = null;
         this._rest = null;
         this._nums = null;
         this._strings = null;
-        this._collection$_length = 0;
+        this._length = 0;
         this._modifications = this._modifications + 1 & 67108863;
       }
     },
@@ -6334,7 +6337,7 @@ var $$ = Object.create(null);
         last.set$_next(cell);
         this._last = cell;
       }
-      ++this._collection$_length;
+      ++this._length;
       this._modifications = this._modifications + 1 & 67108863;
       return cell;
     },
@@ -6350,7 +6353,7 @@ var $$ = Object.create(null);
         this._last = previous;
       else
         next.set$_previous(previous);
-      --this._collection$_length;
+      --this._length;
       this._modifications = this._modifications + 1 & 67108863;
     },
     _computeHashCode$1: function(key) {
@@ -6381,7 +6384,7 @@ var $$ = Object.create(null);
     "^": "Closure:29;this_0",
     call$1: [function(each) {
       return this.this_0.$index(0, each);
-    }, "call$1", null, 2, 0, null, 52, "call"]
+    }, "call$1", null, 2, 0, null, 51, "call"]
   },
   LinkedHashMapCell: {
     "^": "Object;_key<,_value@,_next@,_previous@"
@@ -6389,10 +6392,10 @@ var $$ = Object.create(null);
   LinkedHashMapKeyIterable: {
     "^": "IterableBase;_map",
     get$length: function(_) {
-      return this._map._collection$_length;
+      return this._map._length;
     },
     get$isEmpty: function(_) {
-      return this._map._collection$_length === 0;
+      return this._map._length === 0;
     },
     get$iterator: function(_) {
       var t1, t2;
@@ -6441,20 +6444,20 @@ var $$ = Object.create(null);
     }
   },
   _LinkedHashSet: {
-    "^": "_HashSetBase;_collection$_length,_strings,_nums,_rest,_first,_last,_modifications",
+    "^": "_HashSetBase;_length,_strings,_nums,_rest,_first,_last,_modifications",
     get$iterator: function(_) {
       var t1 = new P.LinkedHashSetIterator(this, this._modifications, null, null);
       t1._cell = this._first;
       return t1;
     },
     get$length: function(_) {
-      return this._collection$_length;
+      return this._length;
     },
     get$isEmpty: function(_) {
-      return this._collection$_length === 0;
+      return this._length === 0;
     },
     get$isNotEmpty: function(_) {
-      return this._collection$_length !== 0;
+      return this._length !== 0;
     },
     contains$1: function(_, object) {
       var strings, nums;
@@ -6497,14 +6500,14 @@ var $$ = Object.create(null);
       index = this._findBucketIndex$2(bucket, object);
       if (index < 0)
         return;
-      return J.$index$asx(bucket, index).get$_collection$_element();
+      return J.$index$asx(bucket, index).get$_element();
     },
     forEach$1: function(_, action) {
       var cell, modifications;
       cell = this._first;
       modifications = this._modifications;
       for (; cell != null;) {
-        action.call$1(cell.get$_collection$_element());
+        action.call$1(cell.get$_element());
         if (modifications !== this._modifications)
           throw H.wrapException(P.ConcurrentModificationError$(this));
         cell = cell.get$_next();
@@ -6514,7 +6517,7 @@ var $$ = Object.create(null);
       var t1 = this._last;
       if (t1 == null)
         throw H.wrapException(P.StateError$("No elements"));
-      return t1.get$_collection$_element();
+      return t1.get$_element();
     },
     add$1: function(_, element) {
       var strings, table, nums;
@@ -6580,13 +6583,13 @@ var $$ = Object.create(null);
       return true;
     },
     clear$0: function(_) {
-      if (this._collection$_length > 0) {
+      if (this._length > 0) {
         this._last = null;
         this._first = null;
         this._rest = null;
         this._nums = null;
         this._strings = null;
-        this._collection$_length = 0;
+        this._length = 0;
         this._modifications = this._modifications + 1 & 67108863;
       }
     },
@@ -6619,7 +6622,7 @@ var $$ = Object.create(null);
         last.set$_next(cell);
         this._last = cell;
       }
-      ++this._collection$_length;
+      ++this._length;
       this._modifications = this._modifications + 1 & 67108863;
       return cell;
     },
@@ -6635,7 +6638,7 @@ var $$ = Object.create(null);
         this._last = previous;
       else
         next.set$_previous(previous);
-      --this._collection$_length;
+      --this._length;
       this._modifications = this._modifications + 1 & 67108863;
     },
     _computeHashCode$1: function(element) {
@@ -6647,7 +6650,7 @@ var $$ = Object.create(null);
         return -1;
       $length = bucket.length;
       for (i = 0; i < $length; ++i)
-        if (J.$eq(bucket[i].get$_collection$_element(), element))
+        if (J.$eq(bucket[i].get$_element(), element))
           return i;
       return -1;
     },
@@ -6660,7 +6663,7 @@ var $$ = Object.create(null);
       }}
   },
   LinkedHashSetCell: {
-    "^": "Object;_collection$_element<,_next@,_previous@"
+    "^": "Object;_element<,_next@,_previous@"
   },
   LinkedHashSetIterator: {
     "^": "Object;_set,_modifications,_cell,_collection$_current",
@@ -6677,7 +6680,7 @@ var $$ = Object.create(null);
           this._collection$_current = null;
           return false;
         } else {
-          this._collection$_current = t1.get$_collection$_element();
+          this._collection$_current = t1.get$_element();
           this._cell = this._cell.get$_next();
           return true;
         }
@@ -6913,13 +6916,13 @@ var $$ = Object.create(null);
       this._map.forEach$1(0, action);
     },
     get$isEmpty: function(_) {
-      return this._map._collection$_length === 0;
+      return this._map._length === 0;
     },
     get$isNotEmpty: function(_) {
-      return this._map._collection$_length !== 0;
+      return this._map._length !== 0;
     },
     get$length: function(_) {
-      return this._map._collection$_length;
+      return this._map._length;
     },
     get$keys: function() {
       var t1 = this._map;
@@ -6939,7 +6942,7 @@ var $$ = Object.create(null);
     $isMap: true
   },
   Maps_mapToString_closure: {
-    "^": "Closure:37;box_0,result_1",
+    "^": "Closure:36;box_0,result_1",
     call$2: function(k, v) {
       var t1 = this.box_0;
       if (!t1.first_0)
@@ -7099,6 +7102,11 @@ var $$ = Object.create(null);
     get$isNotEmpty: function(_) {
       return this.get$length(this) !== 0;
     },
+    addAll$1: function(_, elements) {
+      var t1;
+      for (t1 = J.get$iterator$ax(elements); t1.moveNext$0();)
+        this.add$1(0, t1.get$current());
+    },
     map$1: function(_, f) {
       return H.setRuntimeTypeInfo(new H.EfficientLengthMappedIterable(this, f), [H.getTypeArgumentByIndex(this, 0), null]);
     },
@@ -7199,13 +7207,13 @@ var $$ = Object.create(null);
     return H.Primitives_stringFromCharCodes(start > 0 || len < len ? C.JSArray_methods.sublist$2(charCodes, start, len) : charCodes);
   },
   Function__toMangledNames_closure: {
-    "^": "Closure:37;result_0",
+    "^": "Closure:36;result_0",
     call$2: function(symbol, value) {
       this.result_0.$indexSet(0, symbol.get$_name(), value);
     }
   },
   NoSuchMethodError_toString_closure: {
-    "^": "Closure:53;box_0",
+    "^": "Closure:52;box_0",
     call$2: function(key, value) {
       var t1 = this.box_0;
       if (t1.i_1 > 0)
@@ -7342,7 +7350,7 @@ var $$ = Object.create(null);
       }}
   },
   Duration_toString_sixDigits: {
-    "^": "Closure:54;",
+    "^": "Closure:53;",
     call$1: function(n) {
       if (n >= 100000)
         return "" + n;
@@ -7358,7 +7366,7 @@ var $$ = Object.create(null);
     }
   },
   Duration_toString_twoDigits: {
-    "^": "Closure:54;",
+    "^": "Closure:53;",
     call$1: function(n) {
       if (n >= 10)
         return "" + n;
@@ -7446,25 +7454,63 @@ var $$ = Object.create(null);
       }}
   },
   NoSuchMethodError: {
-    "^": "Error;_core$_receiver,_memberName,_core$_arguments,_namedArguments,_existingArgumentNames",
+    "^": "Error;_receiver,_memberName,_arguments,_namedArguments,_existingArgumentNames",
     toString$0: function(_) {
-      var t1, t2, t3, t4, t5, str;
+      var t1, t2, t3, t4, t5, str, actualParameters, i, formalParameters;
       t1 = {};
       t1.sb_0 = P.StringBuffer$("");
       t1.i_1 = 0;
-      for (t2 = this._core$_arguments, t3 = 0; t4 = t2.length, t3 < t4; t3 = ++t1.i_1) {
-        if (t3 > 0) {
+      t2 = this._arguments;
+      if (t2 != null) {
+        t3 = J.getInterceptor$asx(t2);
+        t4 = 0;
+        while (true) {
+          t5 = t3.get$length(t2);
+          if (typeof t5 !== "number")
+            return H.iae(t5);
+          if (!(t4 < t5))
+            break;
+          t4 = t1.i_1;
+          if (t4 > 0) {
+            t5 = t1.sb_0;
+            t5._contents += ", ";
+          }
           t5 = t1.sb_0;
-          t5._contents += ", ";
+          str = P.Error_safeToString(t3.$index(t2, t4));
+          t5._contents += typeof str === "string" ? str : H.S(str);
+          t4 = ++t1.i_1;
         }
-        t5 = t1.sb_0;
-        if (t3 < 0)
-          return H.ioore(t2, t3);
-        str = P.Error_safeToString(t2[t3]);
-        t5._contents += typeof str === "string" ? str : H.S(str);
       }
       this._namedArguments.forEach$1(0, new P.NoSuchMethodError_toString_closure(t1));
-      return "NoSuchMethodError : method not found: '" + this._memberName.toString$0(0) + "'\nReceiver: " + H.S(P.Error_safeToString(this._core$_receiver)) + "\nArguments: [" + H.S(t1.sb_0) + "]";
+      t2 = this._existingArgumentNames;
+      if (t2 == null)
+        return "NoSuchMethodError : method not found: '" + this._memberName.toString$0(0) + "'\nReceiver: " + H.S(P.Error_safeToString(this._receiver)) + "\nArguments: [" + H.S(t1.sb_0) + "]";
+      else {
+        t3 = t1.sb_0._contents;
+        actualParameters = t3.charCodeAt(0) == 0 ? t3 : t3;
+        t1.sb_0 = P.StringBuffer$("");
+        t3 = J.getInterceptor$asx(t2);
+        i = 0;
+        while (true) {
+          t4 = t3.get$length(t2);
+          if (typeof t4 !== "number")
+            return H.iae(t4);
+          if (!(i < t4))
+            break;
+          if (i > 0) {
+            t4 = t1.sb_0;
+            t4._contents += ", ";
+          }
+          t4 = t1.sb_0;
+          str = t3.$index(t2, i);
+          t4._contents += typeof str === "string" ? str : H.S(str);
+          ++i;
+        }
+        t1 = t1.sb_0._contents;
+        formalParameters = t1.charCodeAt(0) == 0 ? t1 : t1;
+        t1 = this._memberName;
+        return "NoSuchMethodError: incorrect number of arguments passed to method named '" + t1.toString$0(0) + "'\nReceiver: " + H.S(P.Error_safeToString(this._receiver)) + "\nTried calling: " + t1.toString$0(0) + "(" + H.S(actualParameters) + ")\nFound: " + t1.toString$0(0) + "(" + H.S(formalParameters) + ")";
+      }
     },
     static: {NoSuchMethodError$: function(receiver, memberName, positionalArguments, namedArguments, existingArgumentNames) {
         return new P.NoSuchMethodError(receiver, memberName, positionalArguments, namedArguments, existingArgumentNames);
@@ -8619,7 +8665,7 @@ var $$ = Object.create(null);
       }}
   },
   Uri_parse_isRegName: {
-    "^": "Closure:55;",
+    "^": "Closure:54;",
     call$1: function(ch) {
       ch.$lt(0, 128);
       return false;
@@ -8709,7 +8755,7 @@ var $$ = Object.create(null);
     }
   },
   Uri__makeQuery_closure: {
-    "^": "Closure:37;box_0,result_1",
+    "^": "Closure:36;box_0,result_1",
     call$2: function(key, value) {
       var t1 = this.box_0;
       if (!t1.first_0)
@@ -8723,7 +8769,7 @@ var $$ = Object.create(null);
     }
   },
   Uri_hashCode_combine: {
-    "^": "Closure:56;",
+    "^": "Closure:55;",
     call$2: function(part, current) {
       var t1 = J.get$hashCode$(part);
       if (typeof t1 !== "number")
@@ -8732,7 +8778,7 @@ var $$ = Object.create(null);
     }
   },
   Uri_parseIPv4Address_error: {
-    "^": "Closure:57;",
+    "^": "Closure:56;",
     call$1: function(msg) {
       throw H.wrapException(P.FormatException$("Illegal IPv4 address, " + msg, null, null));
     }
@@ -8746,10 +8792,10 @@ var $$ = Object.create(null);
       if (t1.$lt($byte, 0) || t1.$gt($byte, 255))
         this.error_0.call$1("each part must be in the range of `0..255`");
       return $byte;
-    }, "call$1", null, 2, 0, null, 58, "call"]
+    }, "call$1", null, 2, 0, null, 57, "call"]
   },
   Uri_parseIPv6Address_error: {
-    "^": "Closure:59;host_0",
+    "^": "Closure:58;host_0",
     call$2: function(msg, position) {
       throw H.wrapException(P.FormatException$("Illegal IPv6 address, " + msg, this.host_0, position));
     },
@@ -8758,7 +8804,7 @@ var $$ = Object.create(null);
     }
   },
   Uri_parseIPv6Address_parseHex: {
-    "^": "Closure:60;host_1,error_2",
+    "^": "Closure:59;host_1,error_2",
     call$2: function(start, end) {
       var value, t1;
       if (J.$sub$n(end, start) > 4)
@@ -8771,7 +8817,7 @@ var $$ = Object.create(null);
     }
   },
   Uri__uriEncode_byteToHex: {
-    "^": "Closure:37;",
+    "^": "Closure:36;",
     call$2: function($byte, buffer) {
       buffer.write$1(H.Primitives_stringFromCharCode(C.JSString_methods.codeUnitAt$1("0123456789ABCDEF", $byte >>> 4)));
       buffer.write$1(H.Primitives_stringFromCharCode(C.JSString_methods.codeUnitAt$1("0123456789ABCDEF", $byte & 15)));
@@ -9433,12 +9479,12 @@ var $$ = Object.create(null);
     return t1.bindUnaryCallback$2$runGuarded(callback, true);
   },
   _ChildrenElementList: {
-    "^": "ListBase;_element,_childElements",
+    "^": "ListBase;_html$_element,_childElements",
     contains$1: function(_, element) {
       return J.contains$1$asx(this._childElements, element);
     },
     get$isEmpty: function(_) {
-      return this._element.firstElementChild == null;
+      return this._html$_element.firstElementChild == null;
     },
     get$length: function(_) {
       return this._childElements.length;
@@ -9453,13 +9499,13 @@ var $$ = Object.create(null);
       var t1 = this._childElements;
       if (index >>> 0 !== index || index >= t1.length)
         return H.ioore(t1, index);
-      this._element.replaceChild(value, t1[index]);
+      this._html$_element.replaceChild(value, t1[index]);
     },
     set$length: function(_, newLength) {
       throw H.wrapException(P.UnsupportedError$("Cannot resize element lists"));
     },
     add$1: function(_, value) {
-      this._element.appendChild(value);
+      this._html$_element.appendChild(value);
       return value;
     },
     get$iterator: function(_) {
@@ -9468,17 +9514,17 @@ var $$ = Object.create(null);
     },
     addAll$1: function(_, iterable) {
       var t1, t2;
-      for (t1 = J.get$iterator$ax(!!J.getInterceptor(iterable).$is_ChildNodeListLazy ? P.List_List$from(iterable, true, null) : iterable), t2 = this._element; t1.moveNext$0();)
+      for (t1 = J.get$iterator$ax(!!J.getInterceptor(iterable).$is_ChildNodeListLazy ? P.List_List$from(iterable, true, null) : iterable), t2 = this._html$_element; t1.moveNext$0();)
         t2.appendChild(t1.get$current());
     },
     get$first: function(_) {
-      var result = this._element.firstElementChild;
+      var result = this._html$_element.firstElementChild;
       if (result == null)
         throw H.wrapException(P.StateError$("No elements"));
       return result;
     },
     get$last: function(_) {
-      var result = this._element.lastElementChild;
+      var result = this._html$_element.lastElementChild;
       if (result == null)
         throw H.wrapException(P.StateError$("No elements"));
       return result;
@@ -9552,7 +9598,7 @@ var $$ = Object.create(null);
     $isEfficientLength: true
   },
   HttpRequest_request_closure0: {
-    "^": "Closure:37;xhr_0",
+    "^": "Closure:36;xhr_0",
     call$2: function(header, value) {
       this.xhr_0.setRequestHeader(header, value);
     }
@@ -9672,7 +9718,7 @@ var $$ = Object.create(null);
     },
     get$keys: function() {
       var attributes, keys, len, i;
-      attributes = this._element.attributes;
+      attributes = this._html$_element.attributes;
       keys = H.setRuntimeTypeInfo([], [P.String]);
       for (len = attributes.length, i = 0; i < len; ++i) {
         if (i >= attributes.length)
@@ -9687,7 +9733,7 @@ var $$ = Object.create(null);
     },
     get$values: function(_) {
       var attributes, values, len, i;
-      attributes = this._element.attributes;
+      attributes = this._html$_element.attributes;
       values = H.setRuntimeTypeInfo([], [P.String]);
       for (len = attributes.length, i = 0; i < len; ++i) {
         if (i >= attributes.length)
@@ -9712,12 +9758,12 @@ var $$ = Object.create(null);
     }
   },
   _ElementAttributeMap: {
-    "^": "_AttributeMap;_element",
+    "^": "_AttributeMap;_html$_element",
     $index: function(_, key) {
-      return this._element.getAttribute(key);
+      return this._html$_element.getAttribute(key);
     },
     $indexSet: function(_, key, value) {
-      this._element.setAttribute(key, value);
+      this._html$_element.setAttribute(key, value);
     },
     get$length: function(_) {
       return this.get$keys().length;
@@ -10054,9 +10100,6 @@ var $$ = Object.create(null);
       if (other == null)
         return false;
       return !!J.getInterceptor(other).$isJsObject && this._jsObject === other._jsObject;
-    },
-    hasProperty$1: function(property) {
-      return property in this._jsObject;
     },
     toString$0: function(_) {
       var t1, exception;
@@ -10615,7 +10658,7 @@ var $$ = Object.create(null);
       }}
   },
   Logger_Logger_closure: {
-    "^": "Closure:36;name_0",
+    "^": "Closure:35;name_0",
     call$0: function() {
       var thisName, dot, $parent, t1, t2;
       thisName = this.name_0;
@@ -10675,19 +10718,18 @@ var $$ = Object.create(null);
 }],
 ["pappes_web_utility.base", "package:pappes_web_utility/src/pappes_web_utility_base.dart", , E, {
   "^": "",
-  MyHtml__removeEventHandler: [function(e) {
-    var t1, t2, t3;
+  MyHtml_removeAllHandlers: function(htmlDoc, selected) {
+    var t1, t2;
     t1 = $.get$log();
-    t1.info$1("Function : _removeEventHandler, Parameters : {[e," + H.S(e) + "]}");
-    t2 = J.getInterceptor$x(e);
-    t3 = t2.get$nodeName(e);
-    t3.toString;
-    if (t3.toLowerCase() === "script" && t2.get$text(e) != null)
-      E.MyJS_runAnyJavaScript(t2.get$text(e));
-    else
-      t2.replaceWith$1(e, t2.clone$1(e, true));
-    t1.fine$1("Function : _removeEventHandler, Return : void");
-  }, "call$1", "MyHtml__removeEventHandler$closure", 2, 0, 32],
+    t2 = htmlDoc.nodeValue;
+    t1.info$1("Function : removeAllHandlers, Parameters : {[htmlDoc," + (t2 == null ? J.Interceptor.prototype.toString$0.call(C.HtmlDocument_methods, htmlDoc) : t2) + "][selected," + H.S(selected) + "]}");
+    t1 = htmlDoc.body;
+    t1 = new W._ChildrenElementList(t1, t1.children);
+    t1 = t1.where$1(t1, new E.MyHtml_removeAllHandlers_closure(selected));
+    t2 = P.LinkedHashSet_LinkedHashSet(null, null, null, H.getRuntimeTypeArgument(t1, "IterableBase", 0));
+    t2.addAll$1(0, t1);
+    t2.forEach$1(0, H.throwNoSuchMethod("", "_removeEventHandler", [], null));
+  },
   MyHtml_resolveElementUrl: function(childElement, baseUrl) {
     var t1, baseUri;
     t1 = $.get$log();
@@ -10703,25 +10745,23 @@ var $$ = Object.create(null);
     t2 = J.getInterceptor$x(target);
     t3 = t2.querySelectorAll$1(target, "*");
     elementsToBeDeleted = t3.toSet$0(t3);
-    t3 = t2.querySelectorAll$1(target, "input, object, iframe, video");
-    t3.forEach$1(t3, new E.MyHtml_stripDownPage_closure(elementsToBeDeleted));
-    t3 = t2.querySelectorAll$1(target, "a");
-    t3.forEach$1(t3, new E.MyHtml_stripDownPage_closure0(elementsToBeDeleted));
+    if (selected != null)
+      E.MyHtml__whitelistElementAndParents(selected, elementsToBeDeleted);
+    else {
+      t3 = t2.querySelectorAll$1(target, "input, object, iframe, video");
+      t3.forEach$1(t3, new E.MyHtml_stripDownPage_closure(elementsToBeDeleted));
+      t3 = t2.querySelectorAll$1(target, "a");
+      t3.forEach$1(t3, new E.MyHtml_stripDownPage_closure0(elementsToBeDeleted));
+    }
     t3 = t2.querySelectorAll$1(target, "script");
     t3.where$1(t3, new E.MyHtml_stripDownPage_closure1()).forEach$1(0, new E.MyHtml_stripDownPage_closure2(elementsToBeDeleted));
     elementsToBeDeleted.forEach$1(0, new E.MyHtml_stripDownPage_closure3());
-    if (!!t2.$isHtmlDocument) {
-      t1.info$1("Function : removeAllHandlers, Parameters : {[htmlDoc," + H.S(target) + "]}");
-      t2 = target.body;
-      t2 = new W._ChildrenElementList(t2, t2.children);
-      t2.toSet$0(t2).forEach$1(0, E.MyHtml__removeEventHandler$closure());
-      E.MyJS_removeAllTimers();
-      t1.fine$1("Function : removeAllHandlers, Return : void");
-    }
+    if (!!t2.$isHtmlDocument)
+      E.MyHtml_removeAllHandlers(target, selected);
     t1.fine$1("Function : _stripDownPage, Return : void");
   }, function(target) {
     return E.MyHtml_stripDownPage(target, null);
-  }, null, "call$2", "call$1", "MyHtml_stripDownPage$closure", 2, 2, 33, 16],
+  }, null, "call$2", "call$1", "MyHtml_stripDownPage$closure", 2, 2, 32, 16],
   MyHtml__compareElementArea: [function(a, b) {
     var t1, t2, t3, comparison;
     t1 = $.get$log();
@@ -10735,43 +10775,21 @@ var $$ = Object.create(null);
       comparison = t2.get$clientWidth(a) * t2.get$clientHeight(a) === t3.get$clientWidth(b) * t3.get$clientHeight(b) ? 0 : 1;
     t1.fine$1("Function : _compareElementArea, Return : " + comparison);
     return comparison;
-  }, "call$2", "MyHtml__compareElementArea$closure", 4, 0, 34],
+  }, "call$2", "MyHtml__compareElementArea$closure", 4, 0, 33],
   MyHtml__whitelistElementAndParents: function(e, s) {
     var t1 = J.getInterceptor$x(e);
     if (t1.get$parent(e) != null)
       E.MyHtml__whitelistElementAndParents(t1.get$parent(e), s);
     s.remove$1(0, e);
   },
-  MyJS_removeAllTimers: function() {
-    var highestTimeoutId, i, t1, exception;
-    try {
-      t1 = $.get$context();
-      highestTimeoutId = t1.callMethod$2("setTimeout", [";"]);
-      for (i = 0; J.$lt$n(i, highestTimeoutId); i = J.$add$ns(i, 1))
-        t1.callMethod$2("clearTimeout", [i]);
-    } catch (exception) {
-      H.unwrapException(exception);
-      return;
+  MyHtml_removeAllHandlers_closure: {
+    "^": "Closure:29;selected_0",
+    call$1: function(e) {
+      return !J.$eq(e, this.selected_0);
     }
-
-  },
-  MyJS_runAnyJavaScript: function(command) {
-    var jsHasEval, e, exception, t1;
-    jsHasEval = null;
-    try {
-      jsHasEval = $.get$context().hasProperty$1("eval");
-    } catch (exception) {
-      t1 = H.unwrapException(exception);
-      e = t1;
-      throw H.wrapException(P.StateError$("Dart -> JavaScript interop not initialised.  Try changing your html to include <script src=\"packages/browser/inteerop.js\"></script>);  Original error: " + H.S(e)));
-    }
-
-    if (jsHasEval === true)
-      return $.get$context().callMethod$2("eval", [H.S(command)]);
-    throw H.wrapException(P.StateError$("Dart -> JavaScript interop not accepting calls to eval().  Try changing your html to include <script src=\"packages/browser/inteerop.js\"></script>);"));
   },
   MyHtml_resolveElementUrl_closure: {
-    "^": "Closure:37;baseUri_0",
+    "^": "Closure:36;baseUri_0",
     call$2: function(attr, val) {
       var t1;
       if (C.JSArray_methods.contains$1(["src", "href"], attr)) {
@@ -10788,7 +10806,7 @@ var $$ = Object.create(null);
     }
   },
   MyHtml_stripDownPage_closure0: {
-    "^": "Closure:61;elementsToBeDeleted_1",
+    "^": "Closure:60;elementsToBeDeleted_1",
     call$1: function(e) {
       var txt = J.get$text$x(e);
       if ((txt != null ? txt : "") !== "")
@@ -10809,13 +10827,13 @@ var $$ = Object.create(null);
     }
   },
   MyHtml_stripDownPage_closure2: {
-    "^": "Closure:61;elementsToBeDeleted_2",
+    "^": "Closure:60;elementsToBeDeleted_2",
     call$1: function(e) {
       E.MyHtml__whitelistElementAndParents(e, this.elementsToBeDeleted_2);
     }
   },
   MyHtml_stripDownPage_closure3: {
-    "^": "Closure:61;",
+    "^": "Closure:60;",
     call$1: function(e) {
       $.get$log().finest$1("Function : _stripDownPage, remove : " + H.S(e));
       J.remove$0$ax(e);
@@ -10828,7 +10846,7 @@ var $$ = Object.create(null);
       t1 = {};
       t2 = $.get$log();
       t2.info$1("Function : makeProminant, Parameters : {[cleanUpProcess," + cleanUpProcess.toString$0(0) + "], [allowRedirect," + allowRedirect + "]}");
-      iFrameSource = J.get$attributes$x(this._iFrame)._element.getAttribute("src");
+      iFrameSource = J.get$attributes$x(this._iFrame)._html$_element.getAttribute("src");
       t1.iFrameSource_0 = iFrameSource;
       if (!J.contains$1$asx(iFrameSource, "</html>"))
         t1.iFrameSource_0 = P.Uri_parse(window.location.href).resolveUri$1(P.Uri_parse(t1.iFrameSource_0)).toString$0(0);
@@ -10929,12 +10947,12 @@ var $$ = Object.create(null);
     }
   },
   MyIFrame_makeProminant_closure: {
-    "^": "Closure:61;box_0,allowRedirect_1",
+    "^": "Closure:60;box_0,allowRedirect_1",
     call$1: function(frame) {
       var t1, t2;
       t1 = J.getInterceptor$x(frame);
       if (!(t1.get$id(frame) !== "iframe_rebuilt" && this.allowRedirect_1))
-        t2 = !J.$eq(this.box_0.iFrameSource_0, t1.get$attributes(frame)._element.getAttribute("src")) && !this.allowRedirect_1;
+        t2 = !J.$eq(this.box_0.iFrameSource_0, t1.get$attributes(frame)._html$_element.getAttribute("src")) && !this.allowRedirect_1;
       else
         t2 = true;
       if (t2) {
@@ -10944,7 +10962,7 @@ var $$ = Object.create(null);
     }
   },
   MyIFrame__embedIFrameInBody_closure: {
-    "^": "Closure:61;baseUrl_0",
+    "^": "Closure:60;baseUrl_0",
     call$1: function(e) {
       return E.MyHtml_resolveElementUrl(e, this.baseUrl_0);
     }
@@ -10959,7 +10977,7 @@ var $$ = Object.create(null);
           this.this_0._embedIFrameInBody$3(C.JSString_methods.$add(" data:text/html,", t1.get$responseText(contents)), this.cleanUpProcess_2, this.iFrameSource_1);
         else if (this.allowRedirect_3)
           this.this_0._openIFrameInCurrentTab$1(this.iFrameSource_1);
-    }, "call$1", null, 2, 0, null, 62, "call"]
+    }, "call$1", null, 2, 0, null, 61, "call"]
   },
   MyIFrame__buildIFrameAsHtml_closure0: {
     "^": "Closure:29;this_4,iFrameSource_5,allowRedirect_6",
@@ -10999,6 +11017,8 @@ var $$ = Object.create(null);
       t3.toString;
       if (t3.toLowerCase() === "iframe")
         new E.MyIFrame(C.JSArray_methods.get$last(pageElements), t2, null).makeProminant$2(E.MyHtml_stripDownPage$closure(), true);
+      else
+        E.MyHtml_stripDownPage(t2, selected);
     } else {
       t1.finest$1("Function : removeAllOverlays,  no iframe/object selected");
       E.MyHtml_stripDownPage(t2, null);
@@ -11006,10 +11026,10 @@ var $$ = Object.create(null);
     t1.fine$1("Function : removeAllOverlays, Return : void");
   }, "call$0", "main$closure", 0, 0, 12],
   main_closure: {
-    "^": "Closure:64;",
+    "^": "Closure:63;",
     call$1: [function(rec) {
       P.print(rec.get$level().name + ": " + rec.get$time().toString$0(0) + ": " + H.S(J.get$message$x(rec)));
-    }, "call$1", null, 2, 0, null, 63, "call"]
+    }, "call$1", null, 2, 0, null, 62, "call"]
   }
 },
 1],
@@ -11654,9 +11674,6 @@ Isolate.$lazy($, "scheduleImmediateClosure", "_AsyncRun_scheduleImmediateClosure
 Isolate.$lazy($, "_toStringVisiting", "IterableBase__toStringVisiting", "get$IterableBase__toStringVisiting", function() {
   return [];
 });
-Isolate.$lazy($, "context", "context", "get$context", function() {
-  return P._wrapToDart(self);
-});
 Isolate.$lazy($, "_DART_OBJECT_PROPERTY_NAME", "_DART_OBJECT_PROPERTY_NAME", "get$_DART_OBJECT_PROPERTY_NAME", function() {
   return H.getIsolateAffinityTag("_$dart_dartObject");
 });
@@ -11709,7 +11726,6 @@ init.metadata = ["object",
 {func: "args1", args: [null]},
 "o",
 {func: "Object__dynamic", ret: P.Object, args: [null]},
-{func: "void__Element", void: true, args: [W.Element]},
 {func: "dynamic__dynamic__HtmlElement", args: [null], opt: [W.HtmlElement]},
 {func: "int__Element_Element", ret: P.$int, args: [W.Element, W.Element]},
 "invocation",
