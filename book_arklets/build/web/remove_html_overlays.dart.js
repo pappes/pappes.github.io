@@ -10788,7 +10788,7 @@ var $$ = Object.create(null);
       t1.info$1("Function : _whitelistScripts, Parameters : {[e," + H.S(e) + "]}");
       t2 = J.get$outerHtml$x(e);
       src = J.toLowerCase$0$s(t2 != null ? t2 : "");
-      retVal = (C.JSString_methods.contains$1(src, "swf") || C.JSString_methods.contains$1(src, "devtools")) && true;
+      retVal = (C.JSString_methods.contains$1(src, "swf") || C.JSString_methods.contains$1(src, "devtool") || C.JSString_methods.contains$1(src, "devobj")) && true;
       t1.fine$1("Function : _whitelistScripts, Return : " + retVal);
       return retVal;
     }

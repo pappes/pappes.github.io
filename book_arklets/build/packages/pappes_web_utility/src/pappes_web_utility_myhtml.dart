@@ -187,7 +187,8 @@ class MyHtml {
     bool retVal = false;
     String src = ifNull(e.outerHtml, '').toLowerCase();
     if (src.contains('swf') || 
-        src.contains('devtools')) 
+        src.contains('devtool') || 
+        src.contains('devobj')) 
       retVal=true;    
     log.fine('Function : _whitelistScripts, Return : $retVal');
     return retVal;
