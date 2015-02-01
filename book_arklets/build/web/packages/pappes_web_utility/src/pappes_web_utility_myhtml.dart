@@ -221,7 +221,7 @@ class MyHtml {
     //clone the items in the body to sever any event handlers
     log.info('Function : removeAllHandlers, '
         'Parameters : {[htmlDoc,$htmlDoc][selected,$selected]}');
-    htmlDoc.body.children.where((e) => e != selected).toSet().forEach(_removeEventHandler);
+    htmlDoc.body.children.where((e) => e != selected).toSet().forEach(removeEventHandler);
     MyJS.removeAllTimers();
     log.fine('Function : removeAllHandlers, Return : void');
   }
