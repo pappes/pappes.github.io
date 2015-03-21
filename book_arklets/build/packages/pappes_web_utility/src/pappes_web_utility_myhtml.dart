@@ -209,9 +209,7 @@ class MyHtml {
   static void removeEventHandler(Element e) {
     //clone the items in the body to sever any event handlers
     log.info('Function : removeEventHandler, Parameters : {[e,$e]}');
-    if (e.nodeName.toLowerCase() == 'script' && e.text != null) 
-        MyJS.runAnyJavaScript(e.text);
-    else 
+    if (e.nodeName.toLowerCase() != 'script') 
         e.replaceWith(e.clone(true));
     log.fine('Function : removeEventHandler, Return : void');
   }

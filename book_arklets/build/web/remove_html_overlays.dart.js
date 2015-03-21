@@ -10060,9 +10060,6 @@ var $$ = Object.create(null);
         return false;
       return !!J.getInterceptor(other).$isJsObject && this._jsObject === other._jsObject;
     },
-    hasProperty$1: function(property) {
-      return property in this._jsObject;
-    },
     toString$0: function(_) {
       var t1, exception;
       try {
@@ -10687,9 +10684,7 @@ var $$ = Object.create(null);
     t2 = J.getInterceptor$x(e);
     t3 = t2.get$nodeName(e);
     t3.toString;
-    if (t3.toLowerCase() === "script" && t2.get$text(e) != null)
-      E.MyJS_runAnyJavaScript(t2.get$text(e));
-    else
+    if (t3.toLowerCase() !== "script")
       t2.replaceWith$1(e, t2.clone$1(e, true));
     t1.fine$1("Function : removeEventHandler, Return : void");
   }, "call$1", "MyHtml_removeEventHandler$closure", 2, 0, 32],
@@ -10771,21 +10766,6 @@ var $$ = Object.create(null);
       return;
     }
 
-  },
-  MyJS_runAnyJavaScript: function(command) {
-    var jsHasEval, e, exception, t1;
-    jsHasEval = null;
-    try {
-      jsHasEval = $.get$context().hasProperty$1("eval");
-    } catch (exception) {
-      t1 = H.unwrapException(exception);
-      e = t1;
-      throw H.wrapException(P.StateError$("Dart -> JavaScript interop not initialised.  Try changing your html to include <script src=\"packages/browser/inteerop.js\"></script>);  Original error: " + H.S(e)));
-    }
-
-    if (jsHasEval === true)
-      return $.get$context().callMethod$2("eval", [H.S(command)]);
-    throw H.wrapException(P.StateError$("Dart -> JavaScript interop not accepting calls to eval().  Try changing your html to include <script src=\"packages/browser/inteerop.js\"></script>);"));
   },
   MyHtml_removeAllHandlers_closure: {
     "^": "Closure:29;selected_0",
