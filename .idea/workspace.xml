@@ -2,23 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56454fe5-b66a-4241-887c-add32c4a2ef2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book_arklets/build/packages/browser/dart.js" afterPath="$PROJECT_DIR$/book_arklets/build/packages/browser/dart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book_arklets/build/packages/browser/interop.js" afterPath="$PROJECT_DIR$/book_arklets/build/packages/browser/interop.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book_arklets/build/web/main.dart.js" afterPath="$PROJECT_DIR$/book_arklets/build/web/main.dart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book_arklets/build/web/packages/browser/dart.js" afterPath="$PROJECT_DIR$/book_arklets/build/web/packages/browser/dart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book_arklets/build/web/packages/browser/interop.js" afterPath="$PROJECT_DIR$/book_arklets/build/web/packages/browser/interop.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book_arklets/build/web/remove_html_overlays.dart.js" afterPath="$PROJECT_DIR$/book_arklets/build/web/remove_html_overlays.dart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book_arklets/build/web/remove_javascript.dart.js" afterPath="$PROJECT_DIR$/book_arklets/build/web/remove_javascript.dart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book_arklets/build/web/remove_javascript_timers.dart.js" afterPath="$PROJECT_DIR$/book_arklets/build/web/remove_javascript_timers.dart.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book_arklets/build/web/remove_url_query_string.dart" afterPath="$PROJECT_DIR$/book_arklets/build/web/remove_url_query_string.dart" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book_arklets/build/web/remove_url_query_string.dart.js" afterPath="$PROJECT_DIR$/book_arklets/build/web/remove_url_query_string.dart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book_arklets/build/web/remove_url_redirects.dart.js" afterPath="$PROJECT_DIR$/book_arklets/build/web/remove_url_redirects.dart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book_arklets/build/web/retarget_url_new_tab.dart.js" afterPath="$PROJECT_DIR$/book_arklets/build/web/retarget_url_new_tab.dart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book_arklets/build/web/retarget_url_self.dart.js" afterPath="$PROJECT_DIR$/book_arklets/build/web/retarget_url_self.dart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book_arklets/build/web/set_log_level_all.dart.js" afterPath="$PROJECT_DIR$/book_arklets/build/web/set_log_level_all.dart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book_arklets/build/web/set_log_level_fine.dart.js" afterPath="$PROJECT_DIR$/book_arklets/build/web/set_log_level_fine.dart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book_arklets/build/web/set_log_level_info.dart.js" afterPath="$PROJECT_DIR$/book_arklets/build/web/set_log_level_info.dart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book_arklets/build/web/set_log_level_warn.dart.js" afterPath="$PROJECT_DIR$/book_arklets/build/web/set_log_level_warn.dart.js" />
     </list>
     <ignored path="pappes.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,10 +38,8 @@
         <entry file="file://$PROJECT_DIR$/book_arklets/build/web/remove_url_query_string.dart">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
-              <caret line="2" column="49" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="49" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
+              <caret line="1" column="49" selection-start-line="1" selection-start-column="49" selection-end-line="1" selection-end-column="49" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -289,18 +272,18 @@
       <workItem from="1466832546049" duration="414000" />
       <workItem from="1467194125202" duration="1559000" />
       <workItem from="1467195869578" duration="279000" />
-      <workItem from="1467277960713" duration="2004000" />
+      <workItem from="1467277960713" duration="3118000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4256000" />
+    <option name="totallyTimeSpent" value="5370000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1874" height="1092" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18845315" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18845315" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -448,10 +431,8 @@
     <entry file="file://$PROJECT_DIR$/book_arklets/build/web/remove_url_query_string.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="2" column="49" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
+          <caret line="1" column="49" selection-start-line="1" selection-start-column="49" selection-end-line="1" selection-end-column="49" />
+          <folding />
         </state>
       </provider>
     </entry>
