@@ -15,7 +15,7 @@ typedef void _MyHtml_Element_Process(Element e);
 typedef Object _MyHtml_Alter_Element(Object e);
 
 class MyHtml {
-  //implimented as a singleton as all instances would behave the same anyway
+  //implemented as a singleton as all instances would behave the same anyway
   static final _singleton = new MyHtml._initialise();
 
 
@@ -42,7 +42,8 @@ class MyHtml {
       x = new Uri(
           scheme: x.scheme,
           userInfo: x.userInfo,
-          host: x.host,
+          //convert empty string to null to work around a bug in Uri.hasAuthority
+          host: (x.host==''?null:x.host),
           port: x.port,
           path: x.path,
           query: replacementParameters);
@@ -90,7 +91,7 @@ class MyHtml {
 
   /// Changes [originalURL] to use the http protocol if none specified.
   ///
-  /// This is used to unsure that URLs that do not include the scheme
+  /// This is used to ensure that URLs that do not include the scheme
   /// are treated as absolute paths (not relative to the document URL).
   static String setUriSchemeToHttp(String originalURL) {
     String finalUrl;
@@ -181,15 +182,15 @@ class MyHtml {
     log.fine('Function : iterateHTMLDOM, Return : void');
   }
 
-  /// Determines if e if a friendly script [e].
+  /// Determines if [e] if a friendly script.
   static bool _whitelistScripts(Element e) {
     log.info('Function : _whitelistScripts, Parameters : {[e,$e]}');
     bool retVal = false;
     String src = ifNull(e.outerHtml, '').toLowerCase();
-    if (src.contains('swf') || 
-        src.contains('devtool') || 
-        src.contains('devobj')) 
-      retVal=true;    
+    if (src.contains('swf') ||
+        src.contains('devtool') ||
+        src.contains('devobj'))
+      retVal=true;
     log.fine('Function : _whitelistScripts, Return : $retVal');
     return retVal;
   }
@@ -197,7 +198,7 @@ class MyHtml {
   /// Removes suspect script tags from [htmlDoc].
   static removeAllScripts(HtmlDocument htmlDoc) {
     log.info('Function : removeAllScripts, Parameters : {[htmlDoc,$htmlDoc]}');
-    htmlDoc.querySelectorAll('script').where((e) => 
+    htmlDoc.querySelectorAll('script').where((e) =>
         _whitelistScripts(e) == false).forEach((Element e) {
       log.finest('Function : removeAllScripts, removed : ${e.outerHtml}');
       e.remove();
@@ -205,15 +206,16 @@ class MyHtml {
     log.fine('Function : removeAllScripts, Return : void');
   }
 
-  /// Removes event handlers from individual elements 
+  /// Removes event handlers from an element [e]
   static void removeEventHandler(Element e) {
     //clone the items in the body to sever any event handlers
     log.info('Function : removeEventHandler, Parameters : {[e,$e]}');
-    if (e.nodeName.toLowerCase() != 'script') 
+    if (e.nodeName.toLowerCase() != 'script')
         e.replaceWith(e.clone(true));
     log.fine('Function : removeEventHandler, Return : void');
   }
-  /// Removes all event handlers from all elements except [selected] 
+
+  /// Removes all event handlers from all elements except [selected]
   /// on the browser DOM.
   static void removeAllHandlers(HtmlDocument htmlDoc, [HtmlElement selected = null]) {
     //clone the items in the body to sever any event handlers
@@ -224,7 +226,7 @@ class MyHtml {
     log.fine('Function : removeAllHandlers, Return : void');
   }
 
-  /// Changes the target of all <a> anchor href elementsin [htmlDoc].
+  /// Changes the target of all <a> anchor href elements in [htmlDoc].
   ///
   /// * Default [target] is '_blank' (new tab)
   /// * Valid values for [target] are
@@ -256,7 +258,6 @@ class MyHtml {
   ///   * <object>
   ///   * or other element that has an external reference
   /// * [baseUrl] the parent URL to use for resolving
-
   static resolveElementUrl(Element childElement, String baseUrl) {
     log.info(
         'Function : resolveElementUrl, '
@@ -271,7 +272,36 @@ class MyHtml {
     });
     log.fine('Function : resolveElementUrl, Return : void');
   }
-  /// Removes any element that obsures another element from [htmlDoc].
+
+  /// adds a debug [message] into the body of the HTML page or a specified [node].
+  static logMessageIntoHTMLBodyComment(String message, [Node node]) {
+/*
+    log.info(
+        'Function : logMessageIntoHTMLBodyComment, '
+            'Parameters : {[message,$message][element,$node.nodeName]}');
+*/
+    //use supplied node or last node in HTML body
+    Node targetNode = node;
+    if (targetNode == null) {
+      targetNode = document.body.childNodes.last;
+    }
+    //append to existing comment or create new comment node
+    if (targetNode.nodeName != '#comment') {
+      document.body.append( new Comment(message));
+    } else {
+      try {
+        targetNode.text = targetNode.text + "\n"+ message;
+      } catch(exception) {
+        document.body.append( new Comment(message));
+      }
+    }
+/*
+    log.fine('Function : logMessageIntoHTMLBodyComment, Return : void');
+*/
+  }
+
+
+  /// Removes any element that obscures another element from [htmlDoc].
   ///
   /// If there is an iFrame or object on the page, finds the largest one and:
   /// * if it is an iFrame referencing another page and source is available,
@@ -350,7 +380,7 @@ class MyHtml {
       //whitelist all elements of type object so the user can watch videos
       //whitelist all elements of type video so the user can watch videos
       //whitelist all elements of type iframe so that external content can remain
-      target.querySelectorAll('input, object, iframe, video').forEach((e) => 
+      target.querySelectorAll('input, object, iframe, video').forEach((e) =>
           _whitelistElementAndParents(e, elementsToBeDeleted));
 
       //whitelist all elements of type anchor that have text
@@ -361,9 +391,9 @@ class MyHtml {
       });
     }
 
-    //whitelist all scriopts which are known to be useful
+    //whitelist all scripts which are known to be useful
     //so that flash can be dynamically loaded
-    target.querySelectorAll('script').where((e) => 
+    target.querySelectorAll('script').where((e) =>
         _whitelistScripts(e)).forEach((Element e) {
         _whitelistElementAndParents(e, elementsToBeDeleted);
     });
@@ -378,7 +408,7 @@ class MyHtml {
     log.fine('Function : _stripDownPage, Return : void');
   }
 
-  /// Impliments Comparator to allow sorting [Element]s based on ClientWidth;
+  /// Implements Comparator to allow sorting [Element]s based on ClientWidth;
   static int _compareElementArea(Element a, Element b) {
     log.info('Function : _compareElementArea, Parameters : {[a,$a][b,$b]}');
     log.fine(
@@ -386,9 +416,9 @@ class MyHtml {
         'b.width=${b.clientWidth} b.height=${b.clientHeight}');
     int comparison;
     if (a.clientWidth * a.clientHeight <
-        b.clientWidth * b.clientHeight) comparison = -1; 
+        b.clientWidth * b.clientHeight) comparison = -1;
     else if (a.clientWidth * a.clientHeight ==
-             b.clientWidth * b.clientHeight) comparison = 0; 
+             b.clientWidth * b.clientHeight) comparison = 0;
     else comparison = 1;
     log.fine('Function : _compareElementArea, Return : $comparison');
     return comparison;
@@ -400,9 +430,9 @@ class MyHtml {
     s.remove(e);
   }
 
-  ///Returns an exisiting singleton.
+  ///Returns an existing singleton.
   ///
-  ///Constructor as invoked by external instanciations.
+  ///Constructor as invoked by external instantiations.
   factory MyHtml() {
     return _singleton;
   }
@@ -428,6 +458,7 @@ class MyIFrame {//TODO(pappes) remove direct reference to window
   /// and runs extra cleanup processing on it
   makeProminant([void cleanUpProcess(dynamic parentNode), bool allowRedirect =
       true]) {
+    //TODO (pappes) fix typo in method name "Prominent"
     log.info(
         'Function : makeProminant, Parameters : {[cleanUpProcess,$cleanUpProcess], '
             '[allowRedirect,$allowRedirect]}');
@@ -578,7 +609,7 @@ class MyIFrame {//TODO(pappes) remove direct reference to window
 
 
 
-///implimentation of NodeTreeSanitizer that allows the HTML to contain anything.
+///implementation of NodeTreeSanitizer that allows the HTML to contain anything.
 ///Used to build unsafe iframes.
 class _NonTreeSanitizer implements NodeTreeSanitizer {
   void sanitizeTree(Node node) {
