@@ -38,22 +38,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="remove_url_query_string.dart" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/book_arklets/build/web/remove_url_query_string.dart">
+      <file leaf-file-name="logging_functions.dart" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/book_arklets/build/web/logging_functions.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="duplicate libraries.bat" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/book_arklets/build/packages/duplicate libraries.bat">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-              <folding />
+            <state relative-caret-position="153">
+              <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+              <folding>
+                <element signature="e#0#1384#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -68,6 +60,7 @@
       <list>
         <option value="$PROJECT_DIR$/book_arklets/build/web/index.html" />
         <option value="$PROJECT_DIR$/book_arklets/build/web/remove_url_query_string.dart" />
+        <option value="$PROJECT_DIR$/book_arklets/build/web/logging_functions.dart" />
       </list>
     </option>
   </component>
@@ -291,12 +284,12 @@
       <workItem from="1467194125202" duration="1559000" />
       <workItem from="1467195869578" duration="279000" />
       <workItem from="1467277960713" duration="3118000" />
-      <workItem from="1467386071802" duration="2564000" />
+      <workItem from="1467386071802" duration="3176000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7934000" />
+    <option name="totallyTimeSpent" value="8546000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="3" width="1872" height="1084" extended-state="0" />
@@ -305,7 +298,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18865867" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Dart Analysis" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32878152" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Dart Analysis" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32878152" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -465,20 +458,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/book_arklets/build/web/logging_functions.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="24" column="83" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="83" />
-          <folding>
-            <element signature="e#0#1400#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/book_arklets/build/web/remove_url_query_string.dart.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="94">
           <caret line="5316" column="44" selection-start-line="5316" selection-start-column="44" selection-end-line="5316" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book_arklets/build/web/remove_url_query_string.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -491,11 +482,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/book_arklets/build/web/remove_url_query_string.dart">
+    <entry file="file://$PROJECT_DIR$/book_arklets/build/web/logging_functions.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-          <folding />
+        <state relative-caret-position="153">
+          <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#1384#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

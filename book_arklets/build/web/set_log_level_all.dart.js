@@ -1088,7 +1088,7 @@ aw:function(){var z,y
 z=document.querySelector("#pappes_web_utility.log_level")
 if(z==null){z=W.aW("hidden")
 J.aF(z,"pappes_web_utility.log_level")
-document.insertBefore(document.body,z)}y=new H.b1(0,null,null,null,null,null,0)
+document.body.appendChild(z)}y=new H.b1(0,null,null,null,null,null,0)
 y.I(0,"name","ALL")
 y.I(0,"value",0)
 J.aH(z,C.o.Z(y))}},1]]
