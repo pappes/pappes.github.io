@@ -5851,7 +5851,7 @@ gH:function(a){return this.b},
 j:function(a){return this.a}},bD:{"^":"d;a8:a>,F:b>,c,cX:d<,e,M:f>,X:r<,x",
 j:function(a){return"["+H.e(this.a.a)+"] "+this.c+": "+H.e(this.b)}}}],["","",,A,{"^":"",
 lU:function(){var z,y,x,w
-z=document.querySelector("#pappes_web_utility.log_level")
+z=document.querySelector("#bookmaklet_log_level")
 if(z!=null){$.bq=!0
 y=$.$get$aD()
 y.gf6().f0(new A.lV())

@@ -6023,7 +6023,7 @@ $isO:1,
 $asO:function(){return[N.aB]}},bQ:{"^":"d;ac:a>,E:b>,c,df:d<,e,P:f>,Y:r<,x",
 k:function(a){return"["+H.e(this.a.a)+"] "+this.c+": "+H.e(this.b)}}}],["","",,A,{"^":"",
 mi:function(){var z,y,x,w
-z=document.querySelector("#pappes_web_utility.log_level")
+z=document.querySelector("#bookmaklet_log_level")
 if(z!=null){$.bD=!0
 y=$.$get$N()
 y.gfo().fi(new A.mj())

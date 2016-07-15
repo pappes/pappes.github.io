@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56454fe5-b66a-4241-887c-add32c4a2ef2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book_arklets/build/web/logging_functions.dart" afterPath="$PROJECT_DIR$/book_arklets/build/web/logging_functions.dart" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book_arklets/build/web/set_log_level_all.dart.js" afterPath="$PROJECT_DIR$/book_arklets/build/web/set_log_level_all.dart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book_arklets/build/web/set_log_level_fine.dart.js" afterPath="$PROJECT_DIR$/book_arklets/build/web/set_log_level_fine.dart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book_arklets/build/web/set_log_level_info.dart.js" afterPath="$PROJECT_DIR$/book_arklets/build/web/set_log_level_info.dart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book_arklets/build/web/set_log_level_warn.dart.js" afterPath="$PROJECT_DIR$/book_arklets/build/web/set_log_level_warn.dart.js" />
     </list>
     <ignored path="pappes.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,10 +36,10 @@
       <file leaf-file-name="logging_functions.dart" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/book_arklets/build/web/logging_functions.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+            <state relative-caret-position="119">
+              <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
               <folding>
-                <element signature="e#0#1384#0" expanded="true" />
+                <element signature="e#0#1382#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -284,16 +279,16 @@
       <workItem from="1467194125202" duration="1559000" />
       <workItem from="1467195869578" duration="279000" />
       <workItem from="1467277960713" duration="3118000" />
-      <workItem from="1467386071802" duration="3176000" />
+      <workItem from="1467386071802" duration="3612000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8546000" />
+    <option name="totallyTimeSpent" value="8982000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="3" width="1872" height="1084" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18865867" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -484,10 +479,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/book_arklets/build/web/logging_functions.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+        <state relative-caret-position="119">
+          <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
           <folding>
-            <element signature="e#0#1384#0" expanded="true" />
+            <element signature="e#0#1382#0" expanded="true" />
           </folding>
         </state>
       </provider>

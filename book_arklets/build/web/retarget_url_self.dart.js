@@ -3441,7 +3441,7 @@ gt:function(a){return this.b},
 i:function(a){return this.a}},aG:{"^":"b;X:a<,b,c,dm:d<,e,G:f>,E:r<,x",
 i:function(a){return"["+H.a(this.a.a)+"] "+this.c+": "+H.a(this.b)}}}],["","",,A,{"^":"",
 hg:function(){var z,y,x,w
-z=document.querySelector("#pappes_web_utility.log_level")
+z=document.querySelector("#bookmaklet_log_level")
 if(z!=null){$.ax=!0
 y=$.$get$aZ()
 y.gdf().da(new A.hh())

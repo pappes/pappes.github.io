@@ -3652,7 +3652,7 @@ gv:function(a){return this.b},
 j:function(a){return this.a}},aP:{"^":"c;a1:a<,b,c,dC:d<,e,J:f>,G:r<,x",
 j:function(a){return"["+H.b(this.a.a)+"] "+this.c+": "+H.b(this.b)}}}],["","",,A,{"^":"",
 hJ:function(){var z,y,x,w
-z=document.querySelector("#pappes_web_utility.log_level")
+z=document.querySelector("#bookmaklet_log_level")
 if(z!=null){$.aD=!0
 y=$.$get$aE()
 y.gdr().dl(new A.hK())

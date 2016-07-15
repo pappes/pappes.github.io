@@ -3642,7 +3642,7 @@ a_:function(a,b){return J.bd(this.b,C.a.gA(b))},
 gp:function(a){return this.b},
 i:function(a){return this.a}},bp:{"^":"b;"}}],["","",,A,{"^":"",
 hQ:function(){var z,y,x,w
-z=document.querySelector("#pappes_web_utility.log_level")
+z=document.querySelector("#bookmaklet_log_level")
 if(z!=null){$.b6=!0
 y=$.$get$df()
 y.gdN().dI(new A.hR())
