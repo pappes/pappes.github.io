@@ -1,30 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="56454fe5-b66a-4241-887c-add32c4a2ef2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book_arklets/build/web/remove_html_overlays.dart" afterPath="$PROJECT_DIR$/book_arklets/build/web/remove_html_overlays.dart" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book_arklets/build/web/remove_html_overlays.dart.js" afterPath="$PROJECT_DIR$/book_arklets/build/web/remove_html_overlays.dart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book_arklets/build/web/remove_javascript.dart" afterPath="$PROJECT_DIR$/book_arklets/build/web/remove_javascript.dart" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book_arklets/build/web/remove_javascript.dart.js" afterPath="$PROJECT_DIR$/book_arklets/build/web/remove_javascript.dart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book_arklets/build/web/remove_javascript_timers.dart" afterPath="$PROJECT_DIR$/book_arklets/build/web/remove_javascript_timers.dart" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book_arklets/build/web/remove_javascript_timers.dart.js" afterPath="$PROJECT_DIR$/book_arklets/build/web/remove_javascript_timers.dart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book_arklets/build/web/remove_url_query_string.dart" afterPath="$PROJECT_DIR$/book_arklets/build/web/remove_url_query_string.dart" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book_arklets/build/web/remove_url_query_string.dart.js" afterPath="$PROJECT_DIR$/book_arklets/build/web/remove_url_query_string.dart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book_arklets/build/web/remove_url_redirects.dart" afterPath="$PROJECT_DIR$/book_arklets/build/web/remove_url_redirects.dart" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book_arklets/build/web/remove_url_redirects.dart.js" afterPath="$PROJECT_DIR$/book_arklets/build/web/remove_url_redirects.dart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book_arklets/build/web/retarget_url_new_tab.dart" afterPath="$PROJECT_DIR$/book_arklets/build/web/retarget_url_new_tab.dart" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book_arklets/build/web/retarget_url_new_tab.dart.js" afterPath="$PROJECT_DIR$/book_arklets/build/web/retarget_url_new_tab.dart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book_arklets/build/web/retarget_url_self.dart" afterPath="$PROJECT_DIR$/book_arklets/build/web/retarget_url_self.dart" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book_arklets/build/web/retarget_url_self.dart.js" afterPath="$PROJECT_DIR$/book_arklets/build/web/retarget_url_self.dart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book_arklets/build/web/set_log_level_all.dart" afterPath="$PROJECT_DIR$/book_arklets/build/web/set_log_level_all.dart" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book_arklets/build/web/set_log_level_all.dart.js" afterPath="$PROJECT_DIR$/book_arklets/build/web/set_log_level_all.dart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book_arklets/build/web/set_log_level_fine.dart" afterPath="$PROJECT_DIR$/book_arklets/build/web/set_log_level_fine.dart" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book_arklets/build/web/set_log_level_fine.dart.js" afterPath="$PROJECT_DIR$/book_arklets/build/web/set_log_level_fine.dart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book_arklets/build/web/set_log_level_info.dart" afterPath="$PROJECT_DIR$/book_arklets/build/web/set_log_level_info.dart" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book_arklets/build/web/set_log_level_info.dart.js" afterPath="$PROJECT_DIR$/book_arklets/build/web/set_log_level_info.dart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book_arklets/build/web/set_log_level_warn.dart" afterPath="$PROJECT_DIR$/book_arklets/build/web/set_log_level_warn.dart" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book_arklets/build/web/set_log_level_warn.dart.js" afterPath="$PROJECT_DIR$/book_arklets/build/web/set_log_level_warn.dart.js" />
-    </list>
+    <list default="true" id="56454fe5-b66a-4241-887c-add32c4a2ef2" name="Default" comment="" />
     <ignored path="pappes.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,23 +31,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="remove_url_query_string.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/book_arklets/build/web/remove_url_query_string.dart">
+      <file leaf-file-name="remove_url_query_string.dart.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/book_arklets/build/web/remove_url_query_string.dart.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+            <state relative-caret-position="94">
+              <caret line="5316" column="44" selection-start-line="5316" selection-start-column="44" selection-end-line="5316" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="logging_functions.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/book_arklets/build/web/logging_functions.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="24" column="83" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="83" />
               <folding>
-                <element signature="e#0#19#0" expanded="true" />
+                <element signature="e#0#1407#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="duplicate libraries.bat" pinned="false" current-in-tab="true">
+      <file leaf-file-name="duplicate libraries.bat" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/book_arklets/build/packages/duplicate libraries.bat">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="34">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -97,6 +84,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
+    <option name="y" value="3" />
     <option name="width" value="1872" />
     <option name="height" value="1084" />
   </component>
@@ -164,134 +152,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pappes.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pappes.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="book_arklets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="build" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="styles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pappes.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pappes.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="book_arklets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="build" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="styles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="packages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pappes_web_utility" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pappes.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pappes.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="book_arklets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="build" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="styles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="packages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pappes_web_utility" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pappes.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pappes.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="book_arklets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="build" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="styles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="packages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -436,15 +296,15 @@
       <workItem from="1467194125202" duration="1559000" />
       <workItem from="1467195869578" duration="279000" />
       <workItem from="1467277960713" duration="3118000" />
-      <workItem from="1467386071802" duration="875000" />
+      <workItem from="1467386071802" duration="1737000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6245000" />
+    <option name="totallyTimeSpent" value="7107000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1872" height="1084" extended-state="0" />
+    <frame x="-7" y="3" width="1872" height="1084" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18865867" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -495,7 +355,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#0#19#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -575,26 +435,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/book_arklets/build/web/remove_url_query_string.dart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/book_arklets/build/web/remove_javascript_timers.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -618,20 +462,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/book_arklets/build/packages/duplicate libraries.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/book_arklets/build/web/remove_url_query_string.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#0#19#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/book_arklets/build/packages/duplicate libraries.bat">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book_arklets/build/web/logging_functions.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="24" column="83" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="83" />
+          <folding>
+            <element signature="e#0#1407#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book_arklets/build/web/remove_url_query_string.dart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="5316" column="44" selection-start-line="5316" selection-start-column="44" selection-end-line="5316" selection-end-column="44" />
           <folding />
         </state>
       </provider>
