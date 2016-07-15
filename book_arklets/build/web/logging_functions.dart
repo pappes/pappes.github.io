@@ -12,7 +12,7 @@ setLogLevel(logging.Level level) {
   if (logLevelElement==null) {
     logLevelElement=new HiddenInputElement()
       ..name='pappes_web_utility.log_level';
-    document.insertBefore(document.nodes.first, logLevelElement);
+    document.insertBefore(document.body, logLevelElement);
   }
   //convert object [logging.Level] to JSON to store in the HTML page
   var mapData = new Map();
