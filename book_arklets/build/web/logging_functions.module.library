@@ -1,0 +1,1 @@
+{"isEntrypoint":false,"deps":["logging|lib/logging.dart","pappes_web_utility|lib/pappes_web_utility.dart"],"parts":[],"conditionalDeps":[],"sdkDeps":["html","convert"],"hasMain":false}

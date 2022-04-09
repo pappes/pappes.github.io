@@ -1,0 +1,1 @@
+{"isEntrypoint":true,"deps":["pappes_web_utility|lib/pappes_web_utility.dart","book_arklets|web/logging_functions.dart"],"parts":[],"conditionalDeps":[],"sdkDeps":["html"],"hasMain":true}
