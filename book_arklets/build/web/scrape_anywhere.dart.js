@@ -1808,7 +1808,7 @@ r=document.documentElement
 r.toString
 for(r=J.bB(A.h1(r,"div.tribe-events-l-container script")),q=t.f,p=1;r.l();p=l){o=r.gm()
 n=J.f6(o)
-j.F(B.e,"Function : scrapeAnywhereList, found : {[encoded json,"+J.L(n.gS(o))+"]}",k,k)
+j.F(B.e,"Function : scrapeAnywhereList, found : {[encoded json.InnerHtml ,"+J.L(n.gS(o))+"]}",k,k)
 m=B.h.af(0,n.gS(o),k)
 j.F(B.e,"Function : scrapeAnywhereList, found : {[decoded json,"+A.d(J.L(m))+"]}",k,k)
 l=p+1
