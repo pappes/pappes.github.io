@@ -1882,7 +1882,7 @@ r=s.body
 r.toString
 r.appendChild(s.createComment(a))}},
 hf(){var s,r,q,p,o,n,m,l=null
-$.J().n(B.f,"Function : scrapeAnywhereList V 0.17",l,l)
+$.J().n(B.f,"Function : scrapeAnywhereList V 0.19",l,l)
 q=A.l([],t.C)
 p=document.documentElement
 p.toString
@@ -1894,17 +1894,18 @@ m=o+1
 B.b.bk(q,A.eJ(o,r))
 o=m}}$.J().n(B.i,"Function : scrapeAnywhereList, found : {[list,"+A.e4(q,"[","]")+"]}",l,l)
 return q},
-eJ(a,b){var s,r,q,p,o,n=null,m=$.J()
-m.n(B.f,"Function : summariseAnywhereShows",n,n)
+eJ(a,b){var s,r,q,p,o,n,m=null,l=$.J()
+l.n(B.f,"Function : summariseAnywhereShows",m,m)
 s=t.f
 if(s.b(b))return A.l([A.eI(a,b)],t.C)
 else{r=t.R
 if(r.b(b)){q=J.cC(b)
-m.n(B.c,"Function : summariseAnywhereShows, number found : "+q.gk(b),n,n)
+l.n(B.c,"Function : summariseAnywhereShows, number found : "+q.gk(b),m,m)
 p=A.l([],t.C)
-for(m=q.gp(b);m.l();){o=m.gm()
-if(s.b(o))B.b.t(p,A.eI(a,o))
-else if(r.b(o))return A.eJ(a,o)}return p}}m.n(B.i,"Function : summariseAnywhereShow, found : {[unexpected json contents,"+A.d(J.y(b))+"]}",n,n)
+for(l=q.gp(b);l.l();){o=l.gm()
+if(s.b(o)){n=a+1
+B.b.t(p,A.eI(a,o))
+a=n}else if(r.b(o))return A.eJ(a,o)}return p}}l.n(B.i,"Function : summariseAnywhereShow, found : {[unexpected json contents,"+A.d(J.y(b))+"]}",m,m)
 return A.l([],t.C)},
 eI(a,b){var s,r,q,p=null,o="name",n="description",m="location",l="offers"
 $.J().n(B.f,"Function : summariseAnywhereShow, resultMap : ,"+b.i(0),p,p)
@@ -1954,7 +1955,7 @@ else{r=Date.now()
 r=o.a>r}r=r!==!1}else r=!1
 else r=!1
 if(r){l.n(B.c,"Function : getAnywhereOffer, value : "+A.d(q),n,n)
-b.q(0,"Price",q)}l.n(B.c,"Function : getAnywhereOffer, get duration",n,n)
+b.q(0,m,q)}l.n(B.c,"Function : getAnywhereOffer, get duration",n,n)
 A.eG(a,b)
 l.n(B.i,"Function : getAnywhereOffer, found : {[map,"+A.b9(b)+"]}",n,n)},
 eG(a,b){var s,r,q,p,o=null,n="startTime",m="endTime",l=$.J()
