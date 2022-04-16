@@ -1928,8 +1928,8 @@ r.q(0,"producer",J.aw(b.j(0,"organizer"),o))
 r.q(0,"price",-1)
 s=t.f
 if(s.b(b.j(0,l)))A.eH(s.a(b.j(0,l)),r)
-else for(q=J.bF(t.R.a(b.j(0,l)));q.l();)A.eH(s.a(q.gm()),r)
-A.eG(b,r)}$.J().n(B.i,"Function : summariseAnywhereShow, found : {[map,"+A.b9(r)+"]}",p,p)
+else{q=t.R
+if(q.b(b.j(0,l)))for(q=J.bF(q.a(b.j(0,l)));q.l();)A.eH(s.a(q.gm()),r)}A.eG(b,r)}$.J().n(B.i,"Function : summariseAnywhereShow, found : {[map,"+A.b9(r)+"]}",p,p)
 return r},
 eH(a,b){var s,r,q,p,o,n=null,m="price",l=$.J()
 l.n(B.f,"Function : getAnywhereOffer, offer : "+J.y(a),n,n)
