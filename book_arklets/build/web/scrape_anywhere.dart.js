@@ -1310,7 +1310,7 @@ s.b=q
 $.bA=r.b=s
 if(q==null)$.bz=s}},
 fo(a){var s=null,r=$.q
-if(B.d===r){A.at(s,s,B.d,a)
+if(B.e===r){A.at(s,s,B.e,a)
 return}A.at(s,s,r,t.M.a(r.aE(a)))},
 fb(a){return},
 ht(a,b){if(b==null)b=A.im()
@@ -1339,7 +1339,7 @@ s=r
 try{r=d.$2(e,f)
 return r}finally{$.q=s}},
 at(a,b,c,d){t.M.a(d)
-if(B.d!==c)d=c.aE(d)
+if(B.e!==c)d=c.aE(d)
 A.fc(d)},
 dg:function dg(a){this.a=a},
 df:function df(a,b,c){this.a=a
@@ -1881,14 +1881,14 @@ r=s.body
 r.toString
 r.appendChild(s.createComment(a))}},
 hd(){var s,r,q,p,o,n,m,l=null
-$.M().p(B.f,"Function : scrapeAnywhereList V 0.12",l,l)
+$.M().p(B.f,"Function : scrapeAnywhereList V 0.13",l,l)
 q=A.l([],t.C)
 p=document.documentElement
 p.toString
 for(p=J.bF(A.hc(p,"div.tribe-events-l-container script")),o=1;p.l();){s=p.gm()
-$.M().p(B.e,"Function : scrapeAnywhereList, found : {[encoded json.InnerHtml ,"+J.y(J.et(s))+"]}",l,l)
+$.M().p(B.d,"Function : scrapeAnywhereList, found : {[encoded json.InnerHtml ,"+J.y(J.et(s))+"]}",l,l)
 r=null
-try{r=B.j.ae(0,J.et(s),l)}catch(n){}if(r!=null){$.M().p(B.e,"Function : scrapeAnywhereList, found : {[decoded json,"+A.d(J.y(r))+"]}",l,l)
+try{r=B.j.ae(0,J.et(s),l)}catch(n){}if(r!=null){$.M().p(B.d,"Function : scrapeAnywhereList, found : {[decoded json,"+A.d(J.y(r))+"]}",l,l)
 m=o+1
 B.b.bk(q,A.eH(o,r))
 o=m}}$.M().p(B.i,"Function : scrapeAnywhereList, found : {[list,"+A.e4(q,"[","]")+"]}",l,l)
@@ -1899,7 +1899,7 @@ s=t.f
 if(s.b(b))return A.l([A.eG(a,b)],t.C)
 else{r=t.R
 if(r.b(b)){q=J.cB(b)
-m.p(B.e,"Function : summariseAnywhereShows, number found : "+q.gk(b),n,n)
+m.p(B.d,"Function : summariseAnywhereShows, number found : "+q.gk(b),n,n)
 p=A.l([],t.C)
 for(m=q.gn(b);m.l();){o=m.gm()
 if(s.b(o))B.b.t(p,A.eG(a,o))
@@ -1929,25 +1929,29 @@ s=t.f
 if(s.b(b.j(0,"offers")))A.eF(b,r)
 else for(q=J.bF(t.R.a(b.j(0,"offers")));q.l();)A.eF(s.a(q.gm()),r)}$.M().p(B.i,"Function : summariseAnywhereShow, found : {[map,"+A.c_(r)+"]}",p,p)
 return r},
-eF(a,b){var s,r,q,p,o,n,m,l=null,k="startTime",j="endTime",i=$.M()
-i.p(B.f,"Function : getAnywhereOffer, offer : "+J.y(a),l,l)
-s=A.ff(J.y(b.j(0,"price")))
-i.p(B.e,"Function : getAnywhereOffer, maxPrice : "+A.d(s),l,l)
-r=A.ff(J.y(a.j(0,"price")))
-i.p(B.e,"Function : getAnywhereOffer, offerPrice : "+A.d(r),l,l)
-q=A.e3(J.y(a.j(0,"validThrough")))
-i.p(B.e,"Function : getAnywhereOffer, validThrough : "+q.i(0),l,l)
-p=a.j(0,"availability")
-i.p(B.e,"Function : getAnywhereOffer, availability : "+A.d(p),l,l)
-if(J.e1(p,"InStock")&&r>s&&q.a>Date.now()){i.p(B.e,"Function : getAnywhereOffer, value : "+A.d(r),l,l)
-b.q(0,"Price",r)}i.p(B.e,"Function : getAnywhereOffer, get duration",l,l)
-if(a.C(k)&&a.C(j)){o=A.e3(A.U(a.j(0,k)))
-n=A.e3(A.U(a.j(0,j)))
-m=$.fv()
-b.q(0,k,m.T(o))
-b.q(0,j,m.T(n))
-b.q(0,"duration",A.hb(o,n))
-i.p(B.i,"Function : getAnywhereOffer, found : {[map,"+A.c_(b)+"]}",l,l)}},
+eF(a,b){var s,r,q,p,o,n,m,l=null,k="price",j="startTime",i="endTime",h=$.M()
+h.p(B.f,"Function : getAnywhereOffer, offer : "+J.y(a),l,l)
+s=A.ff(J.y(b.j(0,k)))
+h.p(B.d,"Function : getAnywhereOffer, maxPrice : "+A.d(s),l,l)
+r=a.j(0,k)
+h.p(B.d,"Function : getAnywhereOffer, price : "+A.d(r==null?l:J.y(r)),l,l)
+r=a.j(0,k)
+r=r==null?l:J.y(r)
+q=A.ff(r==null?"-1.0":r)
+h.p(B.d,"Function : getAnywhereOffer, offerPrice : "+A.d(q),l,l)
+p=A.e3(J.y(a.j(0,"validThrough")))
+h.p(B.d,"Function : getAnywhereOffer, validThrough : "+p.i(0),l,l)
+o=a.j(0,"availability")
+h.p(B.d,"Function : getAnywhereOffer, availability : "+A.d(o),l,l)
+if(J.e1(o,"InStock")&&q>s&&p.a>Date.now()){h.p(B.d,"Function : getAnywhereOffer, value : "+A.d(q),l,l)
+b.q(0,"Price",q)}h.p(B.d,"Function : getAnywhereOffer, get duration",l,l)
+if(a.C(j)&&a.C(i)){n=A.e3(A.U(a.j(0,j)))
+m=A.e3(A.U(a.j(0,i)))
+r=$.fv()
+b.q(0,j,r.T(n))
+b.q(0,i,r.T(m))
+b.q(0,"duration",A.hb(n,m))
+h.p(B.i,"Function : getAnywhereOffer, found : {[map,"+A.c_(b)+"]}",l,l)}},
 hb(a,b){var s,r,q,p
 $.M().p(B.f,"Function : getDurationText",null,null)
 try{s=B.c.aD(1000*(b.a-a.a),6e7)
@@ -1966,7 +1970,7 @@ a.toString
 A.io(s,s,"T","querySelectorAll")
 s=a.querySelectorAll(b)
 r=new A.bn(s,t.J)
-p.p(B.e,"Function : getElementsList, # found : "+s.length,q,q)
+p.p(B.d,"Function : getElementsList, # found : "+s.length,q,q)
 if(r.gk(r)===0)return B.N
 return r},
 iF(){var s,r,q,p,o,n,m,l
@@ -2644,7 +2648,7 @@ A.C.prototype={
 aS(a,b,c){var s,r,q,p=this.$ti
 p.A(c).h("1/(2)").a(a)
 s=$.q
-if(s===B.d){if(b!=null&&!t.Q.b(b)&&!t.v.b(b))throw A.a(A.cE(b,"onError",u.c))}else{c.h("@<0/>").A(p.c).h("1(2)").a(a)
+if(s===B.e){if(b!=null&&!t.Q.b(b)&&!t.v.b(b))throw A.a(A.cE(b,"onError",u.c))}else{c.h("@<0/>").A(p.c).h("1(2)").a(a)
 if(b!=null)b=A.i6(b,s)}r=new A.C(s,c.h("C<0>"))
 q=b==null?1:3
 this.am(new A.bo(r,q,a,b,p.h("@<1>").A(c).h("bo<1,2>")))
@@ -2903,30 +2907,30 @@ $S:0}
 A.cv.prototype={
 aR(a){var s,r,q
 t.M.a(a)
-try{if(B.d===$.q){a.$0()
+try{if(B.e===$.q){a.$0()
 return}A.f9(null,null,this,a,t.H)}catch(q){s=A.ad(q)
 r=A.a4(q)
 A.cz(s,t.l.a(r))}},
 bH(a,b,c){var s,r,q
 c.h("~(0)").a(a)
 c.a(b)
-try{if(B.d===$.q){a.$1(b)
+try{if(B.e===$.q){a.$1(b)
 return}A.fa(null,null,this,a,b,t.H,c)}catch(q){s=A.ad(q)
 r=A.a4(q)
 A.cz(s,t.l.a(r))}},
 aE(a){return new A.dB(this,t.M.a(a))},
 j(a,b){return null},
 bF(a,b){b.h("0()").a(a)
-if($.q===B.d)return a.$0()
+if($.q===B.e)return a.$0()
 return A.f9(null,null,this,a,b)},
 ag(a,b,c,d){c.h("@<0>").A(d).h("1(2)").a(a)
 d.a(b)
-if($.q===B.d)return a.$1(b)
+if($.q===B.e)return a.$1(b)
 return A.fa(null,null,this,a,b,c,d)},
 bG(a,b,c,d,e,f){d.h("@<0>").A(e).A(f).h("1(2,3)").a(a)
 e.a(b)
 f.a(c)
-if($.q===B.d)return a.$2(b,c)
+if($.q===B.e)return a.$2(b,c)
 return A.i7(null,null,this,a,b,c,d,e,f)},
 aQ(a,b,c,d){return b.h("@<0>").A(c).A(d).h("1(2,3)").a(a)}}
 A.dB.prototype={
@@ -3724,10 +3728,10 @@ B.m=function(hooks) { return hooks; }
 
 B.j=new A.cV()
 B.A=new A.c1()
-B.d=new A.cv()
+B.e=new A.cv()
 B.B=new A.cw()
 B.F=new A.bY(null)
-B.e=new A.am("FINEST",300)
+B.d=new A.am("FINEST",300)
 B.i=new A.am("FINE",500)
 B.f=new A.am("INFO",800)
 B.G=A.l(s(["S","M","T","W","T","F","S"]),t.i)
@@ -3757,7 +3761,7 @@ $.aN=null
 $.bz=null
 $.bA=null
 $.eh=!1
-$.q=B.d
+$.q=B.e
 $.G=A.l([],A.bD("p<f>"))
 $.dL=null
 $.dU=null
