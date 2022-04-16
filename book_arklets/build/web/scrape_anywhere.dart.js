@@ -1882,7 +1882,7 @@ r=s.body
 r.toString
 r.appendChild(s.createComment(a))}},
 hf(){var s,r,q,p,o,n,m,l=null
-$.J().n(B.f,"Function : scrapeAnywhereList V 0.19",l,l)
+$.J().n(B.f,"Function : scrapeAnywhereList V 0.20",l,l)
 q=A.l([],t.C)
 p=document.documentElement
 p.toString
@@ -1997,7 +1997,7 @@ s=A.hf()
 for(r=s.length,q=t.N,p="events=\n",o=0;o<s.length;s.length===r||(0,A.dY)(s),++o){n=s[o]
 m=n.gU(n)
 l=A.m(m)
-p+=A.d1(m,l.h("j(i.E)").a(A.iJ()),l.h("i.E"),q).bz(0,",")+"/n"}r=window.navigator.clipboard
+p+=A.d1(m,l.h("j(i.E)").a(A.iJ()),l.h("i.E"),q).bz(0,",")+"\n"}r=window.navigator.clipboard
 if(r!=null)A.iL(r.writeText(p),t.z)}},J={
 em(a,b,c,d){return{i:a,p:b,e:c,x:d}},
 dO(a){var s,r,q,p,o,n=a[v.dispatchPropertyName]
