@@ -1883,7 +1883,7 @@ r=s.body
 r.toString
 r.appendChild(s.createComment(a))}},
 hg(){var s,r,q,p,o,n,m,l=null
-$.J().n(B.f,"Function : scrapeAnywhereList V 0.32",l,l)
+$.J().n(B.f,"Function : scrapeAnywhereList V 0.33",l,l)
 q=A.m([],t.C)
 p=document.documentElement
 p.toString
@@ -1962,20 +1962,20 @@ r.q(0,l,p)}k.n(B.c,"Function : getAnywhereOffer, get duration",m,m)
 r.K(0,A.eH(a))
 k.n(B.i,"Function : getAnywhereOffer, found : {[map,"+A.ba(r)+"]}",m,m)
 return r},
-eH(a){var s,r,q,p,o,n=null,m="startTime",l="endTime",k=$.J()
-k.n(B.f,"Function : getAnywhereDuration, event : "+a.i(0),n,n)
+eH(a){var s,r,q,p,o,n=null,m="startDate",l=$.J()
+l.n(B.f,"Function : getAnywhereDuration, event : "+a.i(0),n,n)
 s=t.z
 r=A.b7(s,s)
 if(a.C(m)){q=A.e4(A.U(a.j(0,m)))
-k.n(B.c,"Function : getAnywhereOffer, startTime : "+A.d(q),n,n)
-if(a.C(l)){p=A.e4(A.U(a.j(0,l)))
-k.n(B.c,"Function : getAnywhereOffer, endTime : "+A.d(p),n,n)}else p=n
+l.n(B.c,"Function : getAnywhereOffer, startTime : "+A.d(q),n,n)
+if(a.C("endDate")){p=A.e4(A.U(a.j(0,"endDate")))
+l.n(B.c,"Function : getAnywhereOffer, endTime : "+A.d(p),n,n)}else p=n
 s=q!=null
-if(s)r.q(0,m,$.ep().U(q))
+if(s)r.q(0,"startTime",$.ep().U(q))
 o=p!=null
-if(o)r.q(0,l,$.ep().U(p))
+if(o)r.q(0,"endTime",$.ep().U(p))
 if(s&&o)r.q(0,"duration",A.he(q,p))
-k.n(B.i,"Function : getAnywhereDuration, found : {[map,"+A.ba(r)+"]}",n,n)}return r},
+l.n(B.i,"Function : getAnywhereDuration, found : {[map,"+A.ba(r)+"]}",n,n)}return r},
 he(a,b){var s,r,q,p
 $.J().n(B.f,"Function : getDurationText",null,null)
 try{s=B.d.aE(1000*(b.a-a.a),6e7)
