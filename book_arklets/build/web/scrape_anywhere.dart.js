@@ -1882,7 +1882,7 @@ r=s.body
 r.toString
 r.appendChild(s.createComment(a))}},
 hf(){var s,r,q,p,o,n,m,l=null
-$.J().n(B.f,"Function : scrapeAnywhereList V 0.20",l,l)
+$.J().n(B.f,"Function : scrapeAnywhereList V 0.30",l,l)
 q=A.l([],t.C)
 p=document.documentElement
 p.toString
